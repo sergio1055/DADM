@@ -61,7 +61,7 @@ class Deck(
             tarjetas.forEach{
                 println("Simulando tarjeta ${it.question}")
                 for(i in 1..period) {
-                    println("Fecha actual: ${now.toLocalDate()}")
+                    println("Fecha actual ${now.toLocalDate()}")
                     val nextPractice = LocalDateTime.parse(it.nextPracticeDate)
                     if((nextPractice.isBefore(now)) || (nextPractice.isEqual(now))) {
                         it.show()
@@ -75,7 +75,9 @@ class Deck(
     }
 
     fun writeCards(nombre: String) {
-        val filename = "data/$nombre"
+        print("Introduzca el fichero donde guardar las tarjetas: ")
+        val name_file = readLine()!!.toString()
+        val filename = "data/$name_file"
         val file = File(filename)
         cards.forEach() {println(it)}
 
@@ -93,6 +95,7 @@ class Deck(
             for(linea in lineas) {
                 if(linea.contains("card")) {
                     val card = Card.fromString(linea)
+                    print(card)
                     println("$card")
                     cards.add(card)
                 }

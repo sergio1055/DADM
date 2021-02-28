@@ -16,7 +16,7 @@ class Cloze(question: String, answer: String) : Card(question, answer) {
             val interval = tokens.get(7).toLong()
             val nextPractice = tokens.get(8)
 
-            return Card(question, answer, date=date, id=id, easiness = easiness.toDouble(), repetitions = repetitions, interval=interval, nextPracticeDate = nextPractice)
+            return Cloze(question, answer)
         }
     }
     override fun show() {
