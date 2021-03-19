@@ -1,4 +1,4 @@
-package com.uam.proyectocards
+package com.example.encode
 
 import android.app.Application
 import timber.log.Timber

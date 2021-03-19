@@ -1,8 +1,13 @@
-package com.uam.proyectocards
+package com.example.encode
 
 import android.os.Build
+import android.view.View
 import androidx.annotation.RequiresApi
+import java.lang.Exception
+import java.text.SimpleDateFormat
+import java.time.LocalDate
 import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 @RequiresApi(Build.VERSION_CODES.O)
@@ -31,16 +36,7 @@ open class Card (
             val interval = tokens.get(7).toLong()
             val nextPractice = tokens.get(8)
 
-            return Card(
-                question,
-                answer,
-                date = date,
-                id = id,
-                easiness = easiness.toDouble(),
-                repetitions = repetitions,
-                interval = interval,
-                nextPracticeDate = nextPractice
-            )
+            return Card(question, answer, date=date, id=id, easiness = easiness.toDouble(), repetitions = repetitions, interval=interval, nextPracticeDate = nextPractice)
         }
     }
     open fun show() {
