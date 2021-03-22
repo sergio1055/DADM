@@ -55,20 +55,7 @@ open class Card (
         }
     }
 
-    fun update_easy() {
-        quality = 5
-        update(LocalDateTime.now())
-    }
 
-    fun update_doubt() {
-        quality = 3
-        update(LocalDateTime.now())
-    }
-
-    fun update_hard() {
-        quality = 5
-        update(LocalDateTime.now())
-    }
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun update(currentDate : LocalDateTime) {
@@ -123,5 +110,30 @@ open class Card (
         return "card|$question|$answer|$date|$id|$easiness|$repetitions|$interval|$nextPracticeDate"
     }
 
+
+    fun update_easy() {
+        quality = 0
+        update(LocalDateTime.now())
+    }
+
+    fun update_doubt() {
+        quality = 3
+        update(LocalDateTime.now())
+    }
+
+    fun update_hard() {
+        quality = 5
+        update(LocalDateTime.now())
+    }
+
+    fun isDue(now: LocalDateTime?): Boolean {
+        var nextPractice = LocalDateTime.parse(nextPracticeDate)
+
+        if(nextPractice.isBefore(now) || nextPractice.isBefore(now)) {
+            return true
+        }
+
+        return false
+    }
 
 }

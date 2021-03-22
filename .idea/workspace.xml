@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="debug" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="MainActivity|TitleActivity" />
+        <option name="name" value="ciclo" />
+        <option name="packageNamePattern" value="" />
+      </filter>
+    </filters>
+  </component>
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
@@ -22,29 +42,41 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8613e6c-9538-4ab8-a56a-cc37c47721e9" name="Default Changelist" comment="Initial commit practica_2">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/ProyectoCards.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/ProyectoCards.app.iml" afterDir="false" />
+    <list default="true" id="e8613e6c-9538-4ab8-a56a-cc37c47721e9" name="Default Changelist" comment="Avanzado lección 10">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/app/encode.app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/encode.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/StudyActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/StudyFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/StudyViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/TitleActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/TitleFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/color/color_primary.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_title.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_study.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_title.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ProyectoCards.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/ProyectoCards.app.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/proyectocards/ExampleInstrumentedTest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/Card.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/CardApplication.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/proyectocards/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/Card.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/Card.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/MainViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_study.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R58N302TQ0K]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -67,13 +99,22 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+        <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="practica_1" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="practica_1" />
+        <entry key="$PROJECT_DIR$" value="practica_2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -93,11 +134,14 @@
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sergi\IdeaProjects\DADM\src\main\kotlin" />
-    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="android.template.1243060482">
+      <recent name="com.example.encode" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sergi\IdeaProjects\DADM\src\main\kotlin" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -108,8 +152,8 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="ProyectoCards.app" />
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="encode.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -212,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616176603615</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Avanzado lección 10">
+      <created>1616176862864</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616176862864</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,12 +284,53 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Entrega 1 parcial completada" />
     <MESSAGE value="Initial commit practica_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit practica_2" />
+    <MESSAGE value="Avanzado lección 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avanzado lección 10" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1616176613990">
+    <state x="770" y="361" width="442" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1616330692777">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616176613990" />
+    <state x="770" y="361" width="442" height="569" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616330692777" />
+    <state x="72" y="102" width="1336" height="1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1616326184411">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state x="72" y="102" width="1336" height="1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616326184411" />
+    <state x="579" y="400" width="834" height="480" key="AndroidCreateResourceFileDialog" timestamp="1616326037876">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state x="579" y="400" width="834" height="480" key="AndroidCreateResourceFileDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616326037876" />
+    <state x="812" y="434" width="367" height="423" key="AndroidCreateXmlResourceDialog" timestamp="1616243243883">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state x="812" y="434" width="367" height="423" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616243243883" />
+    <state width="1802" height="284" key="GridCell.Tab.0.bottom" timestamp="1616326771576">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state width="1802" height="284" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616326771576" />
+    <state width="1802" height="284" key="GridCell.Tab.0.center" timestamp="1616326771576">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state width="1802" height="284" key="GridCell.Tab.0.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616326771576" />
+    <state width="1802" height="284" key="GridCell.Tab.0.left" timestamp="1616326771576">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state width="1802" height="284" key="GridCell.Tab.0.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616326771576" />
+    <state width="1802" height="284" key="GridCell.Tab.0.right" timestamp="1616326771576">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state width="1802" height="284" key="GridCell.Tab.0.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616326771576" />
+    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1616176869064">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616176869064" />
+    <state x="651" y="486" width="680" height="319" key="edit.logcat.filter.dialog.dimensions" timestamp="1616260019119">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state x="651" y="486" width="680" height="319" key="edit.logcat.filter.dialog.dimensions/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616260019119" />
+    <state x="659" y="341" width="672" height="678" key="search.everywhere.popup" timestamp="1616328642733">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state x="659" y="341" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616328642733" />
   </component>
 </project>
