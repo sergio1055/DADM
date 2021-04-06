@@ -1,48 +1,33 @@
 package com.example.encode
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.encode.databinding.FragmentTitleBinding
 
-class TitleFragment : Fragment() {
-    interface onTitleFragmentInteractionListener {
-        fun onStudy()
-    }
-    var listener: onTitleFragmentInteractionListener? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        listener = context as onTitleFragmentInteractionListener?
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        listener = null
-    }
-
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+class TitleFragment: Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(
-                inflater,
-                R.layout.fragment_title,
-                container,
-                false
-        )
+            inflater,
+            R.layout.fragment_title,
+            container,
+            false)
 
-        binding.infoTextView.setOnClickListener {
-                listener?.onStudy()
+        binding.cardsTitleTextView.setOnClickListener { view ->
+            if (CardsApplication.numberOfCardsLeft() > 0)
+                view.findNavController().navigate(R.id.action_titleFragment_to_cardListFragment)
+            else
+                Toast.makeText(activity, R.string.no_more_cards, Toast.LENGTH_SHORT).show()
         }
-
 
         return binding.root
     }

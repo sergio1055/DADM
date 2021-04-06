@@ -6,7 +6,7 @@ import androidx.annotation.RequiresApi
 import timber.log.Timber
 
 @RequiresApi(Build.VERSION_CODES.O)
-class CardApplication : Application() {
+class CardsApplication : Application() {
 
     init {
         cards.add(Card("To wake up", "Despertarse"))
@@ -20,5 +20,9 @@ class CardApplication : Application() {
 
     companion object {
         var cards: MutableList<Card> = mutableListOf<Card>()
+
+        fun numberOfCardsLeft() : Int {
+            return cards.size
+        }
     }
 }

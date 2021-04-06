@@ -43,32 +43,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8613e6c-9538-4ab8-a56a-cc37c47721e9" name="Default Changelist" comment="Avanzado lección 10">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/encode.app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/encode.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/StudyActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/StudyFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/StudyViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/TitleActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/TitleFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/color/color_primary.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_title.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_study.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_title.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardListFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_list2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ProyectoCards.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/ProyectoCards.app.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/Card.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/Card.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/MainViewModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_study.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardsApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/StudyViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/StudyViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/TitleActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/TitleActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/TitleFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/TitleFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_title.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_title.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,6 +95,7 @@
         <option value="resourceFile" />
         <option value="Kotlin Class" />
         <option value="layoutResourceFile" />
+        <option value="navigationResourceFile" />
       </list>
     </option>
   </component>
@@ -224,7 +215,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Application.MainKt" />
       </list>
     </recent_temporary>
   </component>
@@ -296,14 +287,14 @@
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
     <state x="72" y="102" width="1336" height="1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616326184411" />
-    <state x="579" y="400" width="834" height="480" key="AndroidCreateResourceFileDialog" timestamp="1616326037876">
+    <state x="579" y="400" width="834" height="480" key="AndroidCreateResourceFileDialog" timestamp="1617735669670">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="579" y="400" width="834" height="480" key="AndroidCreateResourceFileDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616326037876" />
-    <state x="812" y="434" width="367" height="423" key="AndroidCreateXmlResourceDialog" timestamp="1616243243883">
+    <state x="579" y="400" width="834" height="480" key="AndroidCreateResourceFileDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617735669670" />
+    <state x="812" y="434" width="367" height="423" key="AndroidCreateXmlResourceDialog" timestamp="1617738409275">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="812" y="434" width="367" height="423" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616243243883" />
+    <state x="812" y="434" width="367" height="423" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617738409275" />
     <state width="1802" height="284" key="GridCell.Tab.0.bottom" timestamp="1616326771576">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
@@ -320,6 +311,10 @@
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
     <state width="1802" height="284" key="GridCell.Tab.0.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616326771576" />
+    <state x="724" y="344" width="533" height="602" key="RollbackChangesDialog" timestamp="1617735394030">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state x="724" y="344" width="533" height="602" key="RollbackChangesDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617735394030" />
     <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1616176869064">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>

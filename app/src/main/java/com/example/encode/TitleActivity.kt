@@ -8,34 +8,14 @@ import androidx.databinding.DataBindingUtil
 import com.example.encode.databinding.ActivityTitleBinding
 import timber.log.Timber
 
-class TitleActivity : AppCompatActivity(), TitleFragment.onTitleFragmentInteractionListener {
+class TitleActivity : AppCompatActivity() {
     lateinit var binding: ActivityTitleBinding
 
-    override fun onStudy() {
-
-        supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.fragment_container, StudyFragment())
-                .addToBackStack("onStudy")
-                .commit()
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_title)
         supportActionBar?.hide()
-
-        var fragment = supportFragmentManager
-                .findFragmentById(R.id.fragment_container)
-
-        if (fragment == null){
-            fragment = TitleFragment()
-
-            supportFragmentManager
-                    .beginTransaction()
-                    .add(R.id.fragment_container, fragment)
-                    .commit()
-        }
 
     }
 

@@ -20,7 +20,7 @@ class StudyViewModel : ViewModel() {
 
     init {
         Timber.i("MainViewModel created")
-        cards = CardApplication.cards
+        cards = CardsApplication.cards
         card = random_card()
 
         _cardsLeft.value = cards.size
