@@ -11,4 +11,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="study_button">Study</string>
     <string name="no_more_cards">No more cards to show</string>
+    <string name="studyButtonText">Study</string>
 </resources>

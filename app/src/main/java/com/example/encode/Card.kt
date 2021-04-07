@@ -9,6 +9,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
+import kotlin.math.roundToLong
 
 @RequiresApi(Build.VERSION_CODES.O)
 open class Card (
@@ -16,13 +17,14 @@ open class Card (
     var answer: String,
     var date: String = LocalDateTime.now().toString(),
     var id: String = UUID.randomUUID().toString(),
-    var quality: Int = 0,
-    var repetitions: Int = 0,
-    var interval: Long = 1L,
-    var nextPracticeDate: String = date,
-    var easiness: Double = 2.5,
-    var answered : Boolean = false
 ) {
+    var quality: Int = 0
+    private var repetitions: Int = 0
+    private var interval: Long = 1L
+    private var nextPracticeDate: String = date
+    private var easiness: Double = 2.5
+    var answered : Boolean = false
+
     companion object {
         @RequiresApi(Build.VERSION_CODES.O)
         fun fromString(cad : String) : Card {
@@ -36,7 +38,7 @@ open class Card (
             val interval = tokens.get(7).toLong()
             val nextPractice = tokens.get(8)
 
-            return Card(question, answer, date=date, id=id, easiness = easiness.toDouble(), repetitions = repetitions, interval=interval, nextPracticeDate = nextPractice)
+            return Card(question, answer, date=date)
         }
     }
     open fun show() {
@@ -72,7 +74,7 @@ open class Card (
         } else if(repetitions == 2) {
             6
         } else {
-            Math.floor(interval*easiness).toLong()
+            (interval*easiness).roundToLong()
         }
 
 

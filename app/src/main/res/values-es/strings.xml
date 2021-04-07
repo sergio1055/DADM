@@ -11,4 +11,5 @@
     <string name="subtitle_text">Toca para estudiar</string>
     <string name="study_button">Estudia</string>
     <string name="no_more_cards">No hay mas cartas para mostrar</string>
+    <string name="studyButtonText">Estudia</string>
 </resources>
