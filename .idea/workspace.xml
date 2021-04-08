@@ -31,24 +31,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8613e6c-9538-4ab8-a56a-cc37c47721e9" name="Default Changelist" comment="Restructure">
-      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardEditFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_assessment_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_list_alt_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_play_circle_filled_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/navdrawer_menu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/Card.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/Card.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardEditFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardEditFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardListFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardsApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardsApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_list2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_list2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/TitleActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/TitleActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_title.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_title.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_edit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_card.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
@@ -84,6 +81,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="resourceFile" />
         <option value="layoutResourceFile" />
       </list>
     </option>
@@ -111,8 +109,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android-custom-view/home/sergiog/Android/Sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-view/home/sergiog/Android/Sdk/sources/android-30/android/widget/TextView.java_SELECTED" value="TextView" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards" />
+    <property name="multi-representation-preview/home/sergiog/Android/Sdk/sources/android-30/android/view/View.java_selected" value="Custom views" />
+    <property name="multi-representation-preview/home/sergiog/Android/Sdk/sources/android-30/android/widget/TextView.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -240,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617894545930</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Lesson 26">
+      <created>1617915750983</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617915750983</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,57 +270,58 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Entrega 1 parcial completada" />
     <MESSAGE value="Add fragmentcardlist" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add fragmentcardlist" />
+    <MESSAGE value="Lesson 26" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 26" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="729" y="391" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617894062689">
+    <state x="729" y="391" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617921396498">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="729" y="391" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894062689" />
+    <state x="729" y="391" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617921396498" />
     <state x="749" y="430" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1617894695661">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
     <state x="749" y="430" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894695661" />
-    <state x="579" y="400" width="824" height="491" key="AndroidCreateResourceFileDialog" timestamp="1617913743460">
+    <state x="579" y="400" width="824" height="491" key="AndroidCreateResourceFileDialog" timestamp="1617922423983">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="579" y="400" width="824" height="491" key="AndroidCreateResourceFileDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913743460" />
-    <state x="813" y="451" width="356" height="388" key="AndroidCreateXmlResourceDialog" timestamp="1617896869217">
+    <state x="579" y="400" width="824" height="491" key="AndroidCreateResourceFileDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617922423983" />
+    <state x="813" y="451" width="367" height="388" key="AndroidCreateXmlResourceDialog" timestamp="1617921036174">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="813" y="451" width="356" height="388" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617896869217" />
-    <state width="1802" height="399" key="GridCell.Tab.0.bottom" timestamp="1617913303436">
+    <state x="813" y="451" width="367" height="388" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617921036174" />
+    <state width="1802" height="399" key="GridCell.Tab.0.bottom" timestamp="1617920041367">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="399" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
-    <state width="1802" height="399" key="GridCell.Tab.0.center" timestamp="1617913303436">
+    <state width="1802" height="399" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
+    <state width="1802" height="399" key="GridCell.Tab.0.center" timestamp="1617920041367">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="399" key="GridCell.Tab.0.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
-    <state width="1802" height="399" key="GridCell.Tab.0.left" timestamp="1617913303436">
+    <state width="1802" height="399" key="GridCell.Tab.0.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
+    <state width="1802" height="399" key="GridCell.Tab.0.left" timestamp="1617920041367">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="399" key="GridCell.Tab.0.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
-    <state width="1802" height="399" key="GridCell.Tab.0.right" timestamp="1617913303436">
+    <state width="1802" height="399" key="GridCell.Tab.0.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
+    <state width="1802" height="399" key="GridCell.Tab.0.right" timestamp="1617920041367">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="399" key="GridCell.Tab.0.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
-    <state width="1802" height="399" key="GridCell.Tab.1.bottom" timestamp="1617913303436">
+    <state width="1802" height="399" key="GridCell.Tab.0.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
+    <state width="1802" height="399" key="GridCell.Tab.1.bottom" timestamp="1617920041367">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="399" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
-    <state width="1802" height="399" key="GridCell.Tab.1.center" timestamp="1617913303436">
+    <state width="1802" height="399" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
+    <state width="1802" height="399" key="GridCell.Tab.1.center" timestamp="1617920041367">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="399" key="GridCell.Tab.1.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
-    <state width="1802" height="399" key="GridCell.Tab.1.left" timestamp="1617913303436">
+    <state width="1802" height="399" key="GridCell.Tab.1.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
+    <state width="1802" height="399" key="GridCell.Tab.1.left" timestamp="1617920041367">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="399" key="GridCell.Tab.1.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
-    <state width="1802" height="399" key="GridCell.Tab.1.right" timestamp="1617913303436">
+    <state width="1802" height="399" key="GridCell.Tab.1.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
+    <state width="1802" height="399" key="GridCell.Tab.1.right" timestamp="1617920041367">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="399" key="GridCell.Tab.1.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
+    <state width="1802" height="399" key="GridCell.Tab.1.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
     <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1617894554801">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
@@ -322,13 +332,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/encode/CardEditFragment.kt</url>
-          <line>56</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/encode/CardsApplication.kt</url>
-          <line>30</line>
-          <option name="timeStamp" value="6" />
+          <line>77</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

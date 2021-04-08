@@ -17,8 +17,11 @@
     <string name="answer_textView">Answer</string>
     <string name="accept_card_edit_button_title">Aceptar</string>
     <string name="cancel_card_edit_button_title">Cancelar</string>
-    <string name="question_editTextView">Escribe aquí la pregunta</string>
-    <string name="answer_editTextView">Escribe aquí la respuesta</string>
-
+    <string name="card_question_hint">Escribe aquí la pregunta</string>
+    <string name="card_answer_hint">Escribe aquí la respuesta</string>
+    <string name="create_card_text">Tarjeta añadida correctamente</string>
+    <string name="decks_nav_menu_title">Mazos</string>
+    <string name="study_nav_menu_title">Estudiar</string>
+    <string name="statistics_nav_menu_title">Estadisticas</string>
 
 </resources>

@@ -45,6 +45,7 @@
             android:id="@+id/list_item_date"
             android:text="@{card.date.substring(0,10)}"
             android:textAppearance="?attr/textAppearanceBody2"
+            android:layout_alignParentEnd="true"
             android:layout_height="match_parent"
             android:layout_width="wrap_content"/>
 

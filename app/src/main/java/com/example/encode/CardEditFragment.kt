@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.encode.databinding.FragmentCardEditBinding
 import com.example.encode.databinding.FragmentStudyBinding
+import com.google.android.material.snackbar.Snackbar
 
 class CardEditFragment : Fragment() {
     lateinit var card : Card
@@ -72,11 +73,12 @@ class CardEditFragment : Fragment() {
         binding.answerEditText.addTextChangedListener(answerTextWatcher)
 
 
-        binding.acceptButton.setOnClickListener {
+        binding.acceptCardEditButton.setOnClickListener {
+            Snackbar.make(it, R.string.create_card_text, Snackbar.LENGTH_LONG).show()
             it.findNavController().navigate(R.id.action_cardEditFragment_to_cardListFragment2)
         }
 
-        binding.cancelButton.setOnClickListener {
+        binding.cancelCardEditButton.setOnClickListener {
             card.question = question
             card.answer = answer
             it.findNavController().navigate(R.id.action_cardEditFragment_to_cardListFragment2)

@@ -36,5 +36,12 @@ class CardsApplication : Application() {
 
             return null
         }
+
+        fun addCard(card: Card) {
+
+            if(!cards.contains(card)) {
+                cards.add(card)
+            }
+        }
     }
 }
