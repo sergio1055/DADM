@@ -10,10 +10,8 @@ import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.encode.databinding.ActivityStudyBinding
-import com.example.encode.databinding.FragmentStudyBinding
-import com.example.encode.databinding.FragmentTitleBinding
-import com.example.proyectocards.databinding.FragmentStudyBinding
+
+import com.uam.proyectocards.databinding.FragmentStudyBinding
 
 class StudyFragment : Fragment() {
     lateinit var binding: FragmentStudyBinding

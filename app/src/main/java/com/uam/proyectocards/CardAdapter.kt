@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.encode.databinding.ActivityStudyBinding
-import com.example.encode.databinding.ListItemCardBinding
-import com.example.proyectocards.databinding.ListItemCardBinding
+import com.uam.proyectocards.databinding.ListItemCardBinding
+
 import timber.log.Timber
 
 class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {

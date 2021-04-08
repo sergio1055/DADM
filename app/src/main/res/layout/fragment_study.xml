@@ -5,7 +5,7 @@
         <import type="android.view.View"/>
         <variable
             name="studyViewModel"
-            type="com.example.encode.StudyViewModel" />
+            type="com.uam.proyectocards.StudyViewModel" />
     </data>
 
     <RelativeLayout

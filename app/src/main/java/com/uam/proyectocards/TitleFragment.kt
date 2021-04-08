@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.example.encode.databinding.FragmentTitleBinding
+import com.uam.proyectocards.databinding.FragmentTitleBinding
 
 class TitleFragment: Fragment() {
     override fun onCreateView(

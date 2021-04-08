@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
-import com.example.encode.databinding.ActivityTitleBinding
+import com.uam.proyectocards.databinding.ActivityTitleBinding
 import timber.log.Timber
 
 class TitleActivity : AppCompatActivity() {

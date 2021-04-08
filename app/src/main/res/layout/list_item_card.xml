@@ -3,7 +3,7 @@
     <data>
         <variable
             name="card"
-            type="com.example.encode.Card" />
+            type="com.uam.proyectocards.Card" />
     </data>
 <RelativeLayout
     android:layout_width="match_parent"
