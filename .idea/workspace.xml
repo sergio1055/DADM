@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidConfiguredLogFilters">
-    <filters>
-      <filter>
-        <option name="logLevel" value="debug" />
-        <option name="logMessagePattern" value="" />
-        <option name="logTagPattern" value="MainActivity|TitleActivity" />
-        <option name="name" value="ciclo" />
-        <option name="packageNamePattern" value="" />
-      </filter>
-    </filters>
-  </component>
   <component name="AndroidLayouts">
     <shared>
       <config />
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
@@ -42,13 +30,34 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8613e6c-9538-4ab8-a56a-cc37c47721e9" name="Default Changelist" comment="Avanzado lección 20" />
+    <list default="true" id="e8613e6c-9538-4ab8-a56a-cc37c47721e9" name="Default Changelist" comment="Restructure">
+      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardEditFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/Card.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/Card.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardListFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardsApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/encode/CardsApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_list2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_list2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_card.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R58N302TQ0K]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -74,9 +83,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
-        <option value="navigationResourceFile" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
         <option value="layoutResourceFile" />
       </list>
@@ -99,22 +105,26 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="R58N302TQ0K" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-08T19:42:54.582Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="" />
     </key>
-    <key name="android.template.1243060482">
-      <recent name="com.example.encode" />
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.uam.proyectocards.viewmodel" />
+      <recent name="com.uam.proyectocards.fragments" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards" />
       <recent name="C:\Users\sergi\IdeaProjects\DADM\src\main\kotlin" />
     </key>
   </component>
@@ -223,28 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614527297631</updated>
     </task>
-    <task id="LOCAL-00002" summary="Initial commit practica_2">
-      <created>1616176603615</created>
+    <task id="LOCAL-00002" summary="Add fragmentcardlist">
+      <created>1617894545930</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1616176603615</updated>
+      <updated>1617894545930</updated>
     </task>
-    <task id="LOCAL-00003" summary="Avanzado lección 10">
-      <created>1616176862864</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1616176862864</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Avanzado lección 20">
-      <created>1617738957471</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1617738957471</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,63 +260,77 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Entrega 1 parcial completada" />
-    <MESSAGE value="Initial commit practica_2" />
-    <MESSAGE value="Avanzado lección 10" />
-    <MESSAGE value="Avanzado lección 20" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avanzado lección 20" />
+    <MESSAGE value="Add fragmentcardlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add fragmentcardlist" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="770" y="361" width="442" height="583" key="#com.intellij.ide.util.MemberChooser" timestamp="1617812785211">
+    <state x="729" y="391" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617894062689">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="770" y="361" width="442" height="583" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617812785211" />
-    <state x="72" y="102" width="1336" height="1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1616326184411">
+    <state x="729" y="391" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894062689" />
+    <state x="749" y="430" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1617894695661">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="72" y="102" width="1336" height="1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616326184411" />
-    <state x="579" y="400" width="834" height="480" key="AndroidCreateResourceFileDialog" timestamp="1617814449967">
+    <state x="749" y="430" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894695661" />
+    <state x="579" y="400" width="824" height="491" key="AndroidCreateResourceFileDialog" timestamp="1617913743460">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="579" y="400" width="834" height="480" key="AndroidCreateResourceFileDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617814449967" />
-    <state x="812" y="434" width="367" height="423" key="AndroidCreateXmlResourceDialog" timestamp="1617813388354">
+    <state x="579" y="400" width="824" height="491" key="AndroidCreateResourceFileDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913743460" />
+    <state x="813" y="451" width="356" height="388" key="AndroidCreateXmlResourceDialog" timestamp="1617896869217">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="812" y="434" width="367" height="423" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617813388354" />
-    <state width="1802" height="284" key="GridCell.Tab.0.bottom" timestamp="1617818177974">
+    <state x="813" y="451" width="356" height="388" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617896869217" />
+    <state width="1802" height="399" key="GridCell.Tab.0.bottom" timestamp="1617913303436">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="284" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617818177974" />
-    <state width="1802" height="284" key="GridCell.Tab.0.center" timestamp="1617818177974">
+    <state width="1802" height="399" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
+    <state width="1802" height="399" key="GridCell.Tab.0.center" timestamp="1617913303436">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="284" key="GridCell.Tab.0.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617818177974" />
-    <state width="1802" height="284" key="GridCell.Tab.0.left" timestamp="1617818177974">
+    <state width="1802" height="399" key="GridCell.Tab.0.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
+    <state width="1802" height="399" key="GridCell.Tab.0.left" timestamp="1617913303436">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="284" key="GridCell.Tab.0.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617818177974" />
-    <state width="1802" height="284" key="GridCell.Tab.0.right" timestamp="1617818177974">
+    <state width="1802" height="399" key="GridCell.Tab.0.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
+    <state width="1802" height="399" key="GridCell.Tab.0.right" timestamp="1617913303436">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="284" key="GridCell.Tab.0.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617818177974" />
-    <state x="724" y="344" width="533" height="602" key="RollbackChangesDialog" timestamp="1617735394030">
+    <state width="1802" height="399" key="GridCell.Tab.0.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
+    <state width="1802" height="399" key="GridCell.Tab.1.bottom" timestamp="1617913303436">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="724" y="344" width="533" height="602" key="RollbackChangesDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617735394030" />
-    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1617738976473">
+    <state width="1802" height="399" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
+    <state width="1802" height="399" key="GridCell.Tab.1.center" timestamp="1617913303436">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617738976473" />
-    <state x="651" y="486" width="680" height="319" key="edit.logcat.filter.dialog.dimensions" timestamp="1616260019119">
+    <state width="1802" height="399" key="GridCell.Tab.1.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
+    <state width="1802" height="399" key="GridCell.Tab.1.left" timestamp="1617913303436">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="651" y="486" width="680" height="319" key="edit.logcat.filter.dialog.dimensions/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616260019119" />
-    <state x="828" y="414" width="325" height="462" key="refactoring.ChangeSignatureDialog" timestamp="1617813871139">
+    <state width="1802" height="399" key="GridCell.Tab.1.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
+    <state width="1802" height="399" key="GridCell.Tab.1.right" timestamp="1617913303436">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="828" y="414" width="325" height="462" key="refactoring.ChangeSignatureDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617813871139" />
-    <state x="659" y="341" width="672" height="678" key="search.everywhere.popup" timestamp="1616328642733">
+    <state width="1802" height="399" key="GridCell.Tab.1.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617913303436" />
+    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1617894554801">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="659" y="341" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1616328642733" />
+    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894554801" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/encode/CardEditFragment.kt</url>
+          <line>56</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/encode/CardsApplication.kt</url>
+          <line>30</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

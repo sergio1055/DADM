@@ -1,14 +1,11 @@
 package com.example.encode
 
-import android.app.LauncherActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.encode.databinding.ActivityStudyBinding
 import com.example.encode.databinding.ListItemCardBinding
-import timber.log.Timber
 
 class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
     lateinit var binding : ListItemCardBinding
@@ -20,8 +17,19 @@ class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
 
 
     inner class CardHolder(view: View) : RecyclerView.ViewHolder(view) {
+        lateinit var card: Card
         fun bind(card: Card) {
+            this.card = card
             binding.card = card
+        }
+
+        init {
+            binding.listItemQuestion.setOnClickListener {
+                val id = card.id
+                it.findNavController()
+                        .navigate(CardListFragmentDirections
+                                .actionCardListFragmentToCardEditFragment(id))
+            }
         }
     }
 

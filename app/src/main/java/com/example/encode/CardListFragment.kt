@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.encode.databinding.FragmentCardList2Binding
+import com.google.android.material.snackbar.Snackbar
 
 class CardListFragment : Fragment() {
     private lateinit var adapter: CardAdapter
@@ -27,14 +28,8 @@ class CardListFragment : Fragment() {
         adapter.data = CardsApplication.cards
         binding.cardRecyclerView.adapter = adapter
 
-        binding.cardsListStudyButton.setOnClickListener {
-            if(CardsApplication.numberOfCardsLeft() > 0) {
-                it.findNavController().navigate(R.id.action_cardListFragment_to_studyFragment2)
-            }
-
-            else {
-                Toast.makeText(activity, R.string.no_more_cards, Toast.LENGTH_SHORT).show()
-            }
+        binding.newCardFab.setOnClickListener {
+            Snackbar.make(it, "Tarjeta añadida", Snackbar.LENGTH_SHORT).show()
         }
 
         return binding.root

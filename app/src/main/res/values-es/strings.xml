@@ -12,4 +12,13 @@
     <string name="study_button">Estudia</string>
     <string name="no_more_cards">No hay mas cartas para mostrar</string>
     <string name="studyButtonText">Estudia</string>
+    <string name="id_text">ID:</string>
+    <string name="question_textView">Pregunta</string>
+    <string name="answer_textView">Answer</string>
+    <string name="accept_card_edit_button_title">Aceptar</string>
+    <string name="cancel_card_edit_button_title">Cancelar</string>
+    <string name="question_editTextView">Escribe aquí la pregunta</string>
+    <string name="answer_editTextView">Escribe aquí la respuesta</string>
+
+
 </resources>

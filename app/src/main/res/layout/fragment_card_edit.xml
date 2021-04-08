@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="card"
+            type="com.example.encode.Card"/>
+    </data>
+
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <TextView
+        android:id="@+id/id_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@{String.format(@string/id_text, card.id)}"
+        tools:text="ID: 10" />
+
+    <TextView
+        android:id="@+id/date_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:text="@{card.date.substring(0,10)}"
+        tools:text="2020/09-28" />
+
+    <TextView
+        android:id="@+id/question_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_textView"
+        android:layout_marginTop="60dp"
+        android:text="@string/question_textView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Pregunta" />
+
+    <EditText
+        android:id="@+id/question_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question_text_view"
+        android:hint="@string/question_editTextView"
+        android:inputType="text" />
+    <TextView
+        android:id="@+id/answer_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question_editText"
+        android:layout_marginTop="30dp"
+        android:text="@string/question_textView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Respuesta" />
+    <EditText
+        android:id="@+id/answer_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/answer_text_view"
+        android:hint="@string/answer_editTextView"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/accept_button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/answer_editText"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="36dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#DFDEDE"
+        android:gravity="center"
+        android:text="@string/accept_card_edit_button_title"
+        android:textColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="211dp"
+        android:layout_height="61dp"
+        android:layout_below="@id/answer_editText"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="100dp"
+        android:backgroundTint="#D1CBCB"
+        android:gravity="center"
+        android:text="@string/cancel_card_edit_button_title"
+        android:textColor="@android:color/holo_red_dark" />
+
+</RelativeLayout>
+</layout>
