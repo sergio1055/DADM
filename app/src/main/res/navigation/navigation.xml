@@ -21,9 +21,9 @@
         tools:layout="@layout/fragment_study"/>
     <fragment
         android:id="@+id/cardListFragment"
-        android:name="com.example.encode.CardListFragment"
+        android:name="com.uam.proyectocards.CardListFragment"
         android:label="fragment_card_list2"
-        tools:layout="@layout/fragment_card_list2" >
+        tools:layout="@layout/fragment_card_list" >
         <action
             android:id="@+id/action_cardListFragment_to_studyFragment2"
             app:destination="@id/studyFragment2" />
