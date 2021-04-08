@@ -1,4 +1,4 @@
-package com.uam.proyectocards
+package com.uam.proyectocards.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.uam.proyectocards.CardAdapter
+import com.uam.proyectocards.CardsApplication
+import com.uam.proyectocards.R
 import com.uam.proyectocards.databinding.FragmentCardListBinding
 
 class CardListFragment : Fragment() {

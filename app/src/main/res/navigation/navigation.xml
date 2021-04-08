@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/titleFragment"
-        android:name="com.uam.proyectocards.TitleFragment"
+        android:name="com.uam.proyectocards.fragments.TitleFragment"
         android:label="TitleFragment"
         tools:layout="@layout/fragment_title" >
         <action
@@ -16,12 +16,12 @@
     </fragment>
     <fragment
         android:id="@+id/studyFragment2"
-        android:name="com.uam.proyectocards.StudyFragment"
+        android:name="com.uam.proyectocards.fragments.StudyFragment"
         android:label="StudyFragment"
         tools:layout="@layout/fragment_study"/>
     <fragment
         android:id="@+id/cardListFragment"
-        android:name="com.uam.proyectocards.CardListFragment"
+        android:name="com.uam.proyectocards.fragments.CardListFragment"
         android:label="fragment_card_list2"
         tools:layout="@layout/fragment_card_list" >
         <action
