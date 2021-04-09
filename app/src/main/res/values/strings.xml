@@ -8,7 +8,6 @@
     <string name="hard_button_title">Hard</string>
     <string name="cards_left_format">%d cards left</string>
     <string name="subtitle_text">Touch to study</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="study_button">Study</string>
     <string name="no_more_cards">No more cards to show</string>
     <string name="studyButtonText">Study</string>
@@ -23,5 +22,6 @@
     <string name="decks_nav_menu_title">Mazes</string>
     <string name="study_nav_menu_title">Study</string>
     <string name="statistics_nav_menu_title">Statistics</string>
+    <string name="copyright">sergio.garcia02@estudiante.uam.es</string>
 
 </resources>

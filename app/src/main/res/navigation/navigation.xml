@@ -13,12 +13,21 @@
         <action
             android:id="@+id/action_titleFragment_to_cardListFragment"
             app:destination="@id/cardListFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_studyFragment2"
+            app:destination="@id/studyFragment2" />
     </fragment>
+
     <fragment
         android:id="@+id/studyFragment2"
         android:name="com.example.encode.StudyFragment"
         android:label="StudyFragment"
-        tools:layout="@layout/fragment_study"/>
+        tools:layout="@layout/fragment_study">
+        <action
+            android:id="@+id/action_studyFragment2_pop_including_titleFragment"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/cardListFragment"
         android:name="com.example.encode.CardListFragment"
@@ -46,5 +55,9 @@
         <argument
             android:name="cardId"
             app:argType="string" />
+        <action
+            android:id="@+id/action_cardEditFragment_pop_including_cardListFragment"
+            app:popUpTo="@id/cardListFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

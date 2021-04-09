@@ -44,4 +44,6 @@ class TitleActivity : AppCompatActivity() {
         Timber.i("onStart")
     }
 
+
+
 }

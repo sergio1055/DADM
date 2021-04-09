@@ -23,5 +23,6 @@
     <string name="decks_nav_menu_title">Mazos</string>
     <string name="study_nav_menu_title">Estudiar</string>
     <string name="statistics_nav_menu_title">Estadisticas</string>
+    <string name="copyright">Sergio García</string>
 
 </resources>
