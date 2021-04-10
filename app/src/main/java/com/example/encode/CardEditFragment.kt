@@ -43,12 +43,13 @@ class CardEditFragment : Fragment() {
         question = card.question
         answer = card.answer
 
+
         return binding.root
     }
 
     override fun onStart() {
         super.onStart()
-
+        String.format(getResources().getString(R.string.id_text), card.id.substring(0,4))
         val questionTextWatcher = object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {}
 

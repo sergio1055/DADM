@@ -20,7 +20,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
-        android:text="@{String.format(@string/id_text, card.id)}"
+        android:text="@string/id_text"
         tools:text="ID: 10" />
 
     <TextView
