@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Tarjetas</string>
-    <string name="question_text">Tree</string>
     <string name="answer_button_text">Ver respuesta</string>
-    <string name="answer_text">Arbol</string>
     <string name="easy_button_title">Fácil</string>
     <string name="doubt_button_title">Dudo</string>
-    <string name="hard_button_title">Dificil</string>
+    <string name="hard_button_title">Difícil</string>
     <string name="cards_left_format">Quedan %d tarjetas</string>
     <string name="subtitle_text">Toca para estudiar</string>
     <string name="study_button">Estudia</string>
     <string name="no_more_cards">No hay mas cartas para mostrar</string>
     <string name="studyButtonText">Estudia</string>
+    <string name="id_text">ID:</string>
+    <string name="question_textView">Pregunta</string>
+    <string name="answer_textView">Answer</string>
+    <string name="accept_card_edit_button_title">Aceptar</string>
+    <string name="cancel_card_edit_button_title">Cancelar</string>
+    <string name="card_question_hint">Escribe aquí la pregunta</string>
+    <string name="card_answer_hint">Escribe aquí la respuesta</string>
+    <string name="create_card_text">Tarjeta añadida correctamente</string>
+    <string name="decks_nav_menu_title">Mazos</string>
+    <string name="study_nav_menu_title">Estudiar</string>
+    <string name="statistics_nav_menu_title">Estadisticas</string>
+    <string name="copyright">Sergio García</string>
+    <string name="accept_button_info">Aceptar</string>
+    <string name="about_nav_menu_title">Acerca de</string>
+    <string name="hide_info_text">Más información</string>
+
 </resources>

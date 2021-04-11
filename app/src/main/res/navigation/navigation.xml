@@ -7,25 +7,77 @@
 
     <fragment
         android:id="@+id/titleFragment"
-        android:name="com.uam.proyectocards.fragments.TitleFragment"
+        android:name="com.uam.proyectocards.TitleFragment"
         android:label="TitleFragment"
         tools:layout="@layout/fragment_title" >
         <action
             android:id="@+id/action_titleFragment_to_cardListFragment"
             app:destination="@id/cardListFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_studyFragment2"
+            app:destination="@id/studyFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/studyFragment2"
-        android:name="com.uam.proyectocards.fragments.StudyFragment"
+        android:id="@+id/studyFragment"
+        android:name="com.uam.proyectocards.StudyFragment"
         android:label="StudyFragment"
-        tools:layout="@layout/fragment_study"/>
+        tools:layout="@layout/fragment_study">
+        <action
+            android:id="@+id/action_studyFragment2_pop_including_titleFragment"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_studyFragment_to_cardListFragment"
+            app:destination="@id/cardListFragment" />
+        <action
+            android:id="@+id/action_studyFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cardListFragment"
-        android:name="com.uam.proyectocards.fragments.CardListFragment"
+        android:name="com.uam.proyectocards.CardListFragment"
         android:label="fragment_card_list2"
-        tools:layout="@layout/fragment_card_list" >
+        tools:layout="@layout/list_item_card" >
         <action
             android:id="@+id/action_cardListFragment_to_studyFragment2"
-            app:destination="@id/studyFragment2" />
+            app:destination="@id/studyFragment" />
+        <action
+            android:id="@+id/action_cardListFragment_to_cardEditFragment"
+            app:destination="@id/cardEditFragment" />
+        <action
+            android:id="@+id/action_cardListFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/cardEditFragment"
+        android:name="com.uam.proyectocards.CardEditFragment"
+        android:label="CardEditFragment"
+        tools:layout="@layout/fragment_card_edit">
+        <action
+            android:id="@+id/action_cardEditFragment_self"
+            app:destination="@id/cardEditFragment" />
+        <action
+            android:id="@+id/action_cardEditFragment_to_cardListFragment2"
+            app:destination="@id/cardListFragment" />
+        <argument
+            android:name="cardId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cardEditFragment_pop_including_cardListFragment"
+            app:popUpTo="@id/cardListFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_cardEditFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.uam.proyectocards.fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>

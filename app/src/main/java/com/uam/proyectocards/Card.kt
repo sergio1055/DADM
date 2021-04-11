@@ -19,10 +19,10 @@ open class Card (
     var id: String = UUID.randomUUID().toString(),
 ) {
     var quality: Int = 0
-    private var repetitions: Int = 0
-    private var interval: Long = 1L
-    private var nextPracticeDate: String = date
-    private var easiness: Double = 2.5
+    var repetitions: Int = 0
+    var interval: Long = 1L
+    var nextPracticeDate: String = date
+    var easiness: Double = 2.5
     var answered : Boolean = false
 
     companion object {
@@ -41,6 +41,7 @@ open class Card (
             return Card(question, answer, date=date)
         }
     }
+
     open fun show() {
         var dateParse = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             LocalDateTime.parse(nextPracticeDate)
@@ -113,23 +114,8 @@ open class Card (
     }
 
 
-    fun update_easy() {
-        quality = 0
-        update(LocalDateTime.now())
-    }
-
-    fun update_doubt() {
-        quality = 3
-        update(LocalDateTime.now())
-    }
-
-    fun update_hard() {
-        quality = 5
-        update(LocalDateTime.now())
-    }
-
     fun isDue(now: LocalDateTime?): Boolean {
-        var nextPractice = LocalDateTime.parse(nextPracticeDate)
+        val nextPractice = LocalDateTime.parse(nextPracticeDate)
 
         if(nextPractice.isBefore(now) || nextPractice.isBefore(now)) {
             return true

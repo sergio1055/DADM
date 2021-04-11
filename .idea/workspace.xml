@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
@@ -25,14 +30,75 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8613e6c-9538-4ab8-a56a-cc37c47721e9" name="Default Changelist" comment="Add fragmentcardlist">
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/uam/proyectocards/databinding/FragmentStudyBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/uam/proyectocards/databinding/FragmentStudyBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/CardApplication.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/CardListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/CardListFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/StudyFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/StudyFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/StudyViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/viewmodel/StudyViewModel.kt" afterDir="false" />
+    <list default="true" id="e8613e6c-9538-4ab8-a56a-cc37c47721e9" name="Default Changelist" comment="Restructure">
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/fileContent/fileContent.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/app/proyectocards.app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/StudyActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/AboutFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/CardEditFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/color/color_primary.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_assessment_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_info_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_list_alt_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_play_circle_filled_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_outline_bar_chart_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_card_edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_card_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_study.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_title.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/list_item_card.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/nav_header.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_study.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/navdrawer_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/encode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/proyectocards.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/Card.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/Card.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/CardAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/CardAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/CardsApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/CardsApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/TitleActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/TitleActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/CardListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/CardListFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/StudyFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/StudyFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/TitleFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/TitleFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/viewmodel/StudyViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/viewmodel/StudyViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_title.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_title.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_list.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_study.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_study.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_card.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +128,23 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="resourceFile" />
+        <option value="layoutResourceFile" />
+        <option value="valueResourceFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="practica_1" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="practica_1" />
+        <entry key="$PROJECT_DIR$" value="encode" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,12 +155,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_API_30_x86" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-09T08:09:45.179Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android-custom-view/home/sergiog/Android/Sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-view/home/sergiog/Android/Sdk/sources/android-30/android/widget/TextView.java_SELECTED" value="TextView" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1617955556833" />
+    <property name="multi-representation-preview/home/sergiog/Android/Sdk/sources/android-30/android/view/View.java_selected" value="Custom views" />
+    <property name="multi-representation-preview/home/sergiog/Android/Sdk/sources/android-30/android/widget/TextView.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -109,7 +192,7 @@
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="encode.app" />
+      <module name="proyectocards.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -178,6 +261,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainKt" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
@@ -207,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617894545930</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Lesson 26">
+      <created>1617915750983</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617915750983</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,36 +323,87 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Entrega 1 parcial completada" />
     <MESSAGE value="Add fragmentcardlist" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add fragmentcardlist" />
+    <MESSAGE value="Lesson 26" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 26" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="729" y="391" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617894062689">
+    <state x="729" y="391" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617921396498">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="729" y="391" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894062689" />
+    <state x="729" y="391" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617921396498" />
     <state x="749" y="430" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1617894695661">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
     <state x="749" y="430" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894695661" />
-    <state width="1802" height="294" key="GridCell.Tab.0.bottom" timestamp="1617894473388">
+    <state x="172" y="202" width="1648" height="880" key="AVDManager" timestamp="1618136607519">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="294" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894473388" />
-    <state width="1802" height="294" key="GridCell.Tab.0.center" timestamp="1617894473388">
+    <state x="172" y="202" width="1648" height="880" key="AVDManager/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618136607519" />
+    <state x="433" y="302" width="824" height="491" key="AndroidCreateResourceFileDialog" timestamp="1617955621601">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state x="579" y="400" width="824" height="491" key="AndroidCreateResourceFileDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617922423983" />
+    <state x="433" y="302" key="AndroidCreateResourceFileDialog/67.27.1213.997@67.27.1213.997" timestamp="1617955621601" />
+    <state x="813" y="451" width="356" height="359" key="AndroidCreateXmlResourceDialog" timestamp="1618136451038">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="294" key="GridCell.Tab.0.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894473388" />
-    <state width="1802" height="294" key="GridCell.Tab.0.left" timestamp="1617894473388">
+    <state x="813" y="451" width="367" height="388" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618136451038" />
+    <state x="581" y="349" width="356" height="359" key="AndroidCreateXmlResourceDialog/67.27.1213.997@67.27.1213.997" timestamp="1617955737387" />
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1617954775470">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1617954775470" />
+    <state width="1802" height="294" key="GridCell.Tab.0.bottom" timestamp="1618136944411">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="294" key="GridCell.Tab.0.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894473388" />
-    <state width="1802" height="294" key="GridCell.Tab.0.right" timestamp="1617894473388">
+    <state width="1802" height="294" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618136944411" />
+    <state width="1167" height="260" key="GridCell.Tab.0.bottom/67.27.1213.997@67.27.1213.997" timestamp="1617956059669" />
+    <state width="1802" height="294" key="GridCell.Tab.0.center" timestamp="1618136944411">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="294" key="GridCell.Tab.0.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894473388" />
+    <state width="1802" height="294" key="GridCell.Tab.0.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618136944411" />
+    <state width="1167" height="260" key="GridCell.Tab.0.center/67.27.1213.997@67.27.1213.997" timestamp="1617956059669" />
+    <state width="1802" height="294" key="GridCell.Tab.0.left" timestamp="1618136944411">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state width="1802" height="294" key="GridCell.Tab.0.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618136944411" />
+    <state width="1167" height="260" key="GridCell.Tab.0.left/67.27.1213.997@67.27.1213.997" timestamp="1617956059669" />
+    <state width="1802" height="294" key="GridCell.Tab.0.right" timestamp="1618136944411">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state width="1802" height="294" key="GridCell.Tab.0.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618136944411" />
+    <state width="1167" height="260" key="GridCell.Tab.0.right/67.27.1213.997@67.27.1213.997" timestamp="1617956059669" />
+    <state width="1802" height="399" key="GridCell.Tab.1.bottom" timestamp="1617920041367">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state width="1802" height="399" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
+    <state width="1802" height="399" key="GridCell.Tab.1.center" timestamp="1617920041367">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state width="1802" height="399" key="GridCell.Tab.1.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
+    <state width="1802" height="399" key="GridCell.Tab.1.left" timestamp="1617920041367">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state width="1802" height="399" key="GridCell.Tab.1.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
+    <state width="1802" height="399" key="GridCell.Tab.1.right" timestamp="1617920041367">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state width="1802" height="399" key="GridCell.Tab.1.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617920041367" />
+    <state x="223" y="195" width="1536" height="901" key="MergeDialog" timestamp="1618133927077">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state x="223" y="195" width="1536" height="901" key="MergeDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618133927077" />
     <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1617894554801">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
     <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1617894554801" />
+    <state x="708" y="336" width="566" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1618133921285">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state x="708" y="336" width="566" height="619" key="git4idea.branch.GitSmartOperationDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618133921285" />
+    <state x="659" y="341" width="672" height="678" key="search.everywhere.popup" timestamp="1618136302884">
+      <screen x="0" y="102" width="1920" height="1080" />
+    </state>
+    <state x="659" y="341" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618136302884" />
   </component>
 </project>

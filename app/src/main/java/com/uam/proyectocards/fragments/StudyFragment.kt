@@ -1,4 +1,4 @@
-package com.uam.proyectocards.fragments
+package com.uam.proyectocards
 
 import android.os.Build
 import android.os.Bundle
@@ -10,9 +10,7 @@ import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.uam.proyectocards.R
-import com.uam.proyectocards.viewmodel.StudyViewModel
-
+import androidx.navigation.fragment.findNavController
 import com.uam.proyectocards.databinding.FragmentStudyBinding
 
 class StudyFragment : Fragment() {
@@ -25,7 +23,7 @@ class StudyFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     private var listener = View.OnClickListener { v ->
         val quality = when(v?.id) {
-            R.id.easy_button -> 0
+            R.id.easy_button-> 0
             R.id.doubt_button -> 3
             R.id.hard_button -> 5
             else -> 0
@@ -36,6 +34,7 @@ class StudyFragment : Fragment() {
         if(viewModel.card == null) {
             Toast.makeText(this.context, "No hay mas tarjetas para mostrar", Toast.LENGTH_LONG).show()
             binding.answerButton.visibility = View.INVISIBLE
+            findNavController().navigate(R.id.action_studyFragment_to_cardListFragment)
         }
 
         binding.invalidateAll()
@@ -45,7 +44,7 @@ class StudyFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate<FragmentStudyBinding>(
                 inflater,
-            R.layout.fragment_study,
+                R.layout.fragment_study,
                 container,
                 false
         )

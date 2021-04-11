@@ -1,12 +1,10 @@
-package com.uam.proyectocards.viewmodel
+package com.uam.proyectocards
 
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.uam.proyectocards.Card
-import com.uam.proyectocards.CardsApplication
 import timber.log.Timber
 import java.time.LocalDateTime
 

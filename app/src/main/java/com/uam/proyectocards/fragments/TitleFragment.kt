@@ -1,4 +1,4 @@
-package com.uam.proyectocards.fragments
+package com.uam.proyectocards
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,6 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.uam.proyectocards.CardsApplication
-import com.uam.proyectocards.R
 import com.uam.proyectocards.databinding.FragmentTitleBinding
 
 class TitleFragment: Fragment() {
