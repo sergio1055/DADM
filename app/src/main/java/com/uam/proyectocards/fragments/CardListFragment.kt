@@ -1,4 +1,4 @@
-package com.uam.proyectocards
+package com.uam.proyectocards.fragments
 
 import android.os.Build
 import android.os.Bundle
@@ -9,7 +9,11 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.uam.proyectocards.CardsApplication
+import com.uam.proyectocards.R
+import com.uam.proyectocards.adapter.CardAdapter
 import com.uam.proyectocards.databinding.FragmentCardListBinding
+import com.uam.proyectocards.model.Card
 
 
 class CardListFragment : Fragment() {
@@ -25,8 +29,12 @@ class CardListFragment : Fragment() {
             R.layout.fragment_card_list,
             container,
             false)
+
+        val args = CardListFragmentArgs.fromBundle(requireArguments())
+
         adapter = CardAdapter()
-        adapter.data = CardsApplication.cards
+        adapter.deckId = args.deckId
+        adapter.data = adapter.deckId?.let { CardsApplication.getDeck(it)?.cards }!!
         binding.cardRecyclerView.adapter = adapter
 
         binding.newCardFab.setOnClickListener {
@@ -37,8 +45,11 @@ class CardListFragment : Fragment() {
             // pasando el id de card como argumento
             it.findNavController()
                 .navigate(
-                    CardListFragmentDirections
-                    .actionCardListFragmentToCardEditFragment(card.id))
+                    CardListFragmentDirections.actionCardListFragmentToCardEditFragment(
+                        card.id,
+                        adapter.deckId
+                    )
+                )
         }
 
 

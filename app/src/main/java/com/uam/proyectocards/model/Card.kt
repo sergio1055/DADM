@@ -1,13 +1,8 @@
-package com.uam.proyectocards
+package com.uam.proyectocards.model
 
 import android.os.Build
-import android.view.View
 import androidx.annotation.RequiresApi
-import java.lang.Exception
-import java.text.SimpleDateFormat
-import java.time.LocalDate
 import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.math.roundToLong
 
@@ -32,11 +27,6 @@ open class Card (
             val question = tokens.get(1)
             val answer = tokens.get(2)
             val date = tokens.get(3)
-            val id = tokens.get(4)
-            val easiness = tokens.get(5).toDouble()
-            val repetitions = tokens.get(6).toInt()
-            val interval = tokens.get(7).toLong()
-            val nextPractice = tokens.get(8)
 
             return Card(question, answer, date=date)
         }
@@ -46,11 +36,10 @@ open class Card (
         var dateParse = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             LocalDateTime.parse(nextPracticeDate)
         } else {
-            TODO("VERSION.SDK_INT < O")
+            throw Exception("Versión incorrecta")
         }
-        println("Fecha actual $dateParse.toLocalDate()\n")
+
         println("$question teclea INTRO para ver respuesta")
-        val key = readLine().toString()
         println("$answer (Teclea 0,3,5)")
         val input2 = readLine()!!.toIntOrNull()
         if (input2 != null) {

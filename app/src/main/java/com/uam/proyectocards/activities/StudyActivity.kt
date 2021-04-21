@@ -1,10 +1,11 @@
-package com.uam.proyectocards
+package com.uam.proyectocards.activities
 
 import android.os.Build
 import android.os.Bundle
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.uam.proyectocards.R
 import com.uam.proyectocards.databinding.ActivityStudyBinding
 import timber.log.Timber
 

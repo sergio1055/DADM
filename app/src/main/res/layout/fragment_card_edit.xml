@@ -5,7 +5,7 @@
 
         <variable
             name="card"
-            type="com.uam.proyectocards.Card"/>
+            type="com.uam.proyectocards.model.Card"/>
     </data>
 
 <RelativeLayout
@@ -17,10 +17,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="@dimen/marginTop_id"
+        android:layout_marginEnd="@dimen/marginEnd_id"
         android:gravity="center"
-        android:text="@string/id_text"
+        android:text="@{String.format(@string/id_text, card.id.substring(0,4)).toUpperCase()}"
         tools:text="ID: 10" />
 
     <TextView
@@ -29,8 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/id_textView"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="-4dp"
+        android:layout_marginTop="@dimen/marginTop_date"
         android:gravity="center"
         android:text="@{card.date.substring(0,10)}"
         android:textColor="@color/colorPrimary"
@@ -44,8 +43,8 @@
         android:layout_below="@id/date_textView"
         android:layout_alignParentStart="true"
         android:layout_marginHorizontal="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="47dp"
+        android:layout_marginStart="@dimen/marginStart_inputAnswer"
+        android:layout_marginTop="@dimen/marginTop_questionLayout"
         android:hint="@string/card_question_hint">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -53,8 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/answer_edit_text"
-            android:layout_marginTop="383dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginTop="@dimen/marginTop_question"
             android:baselineAligned="false"
             android:text="@{card.question}" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -67,21 +65,23 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="335dp"
+        android:layout_marginHorizontal="@dimen/marginHorizontal_inputAnswer"
+        android:layout_marginStart="@dimen/marginStart_inputAnswer"
+        android:layout_marginTop="@dimen/marginTop_inputAnswer"
         android:hint="@string/card_answer_hint">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/answer_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/answer_text_view"
-            android:layout_marginTop="383dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginTop="@dimen/marginTop_inputText"
+            android:layout_marginEnd="@dimen/marginEnd_inputText"
             android:baselineAligned="false"
             android:text="@{card.answer}" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:id="@+id/card_edit_buttons"
@@ -89,9 +89,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginTop="@dimen/marginTop_toggle"
+        android:layout_marginEnd="@dimen/marginEnd_toggle"
+        android:layout_marginBottom="@dimen/marginBottom_toggle"
         android:gravity="center">
 
         <Button
@@ -108,6 +108,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cancel_card_edit_button_title"
+            android:textColor="@color/redColor" />
+
+        <Button
+            android:id="@+id/remove_card_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remove_card_button_text"
             android:textColor="@color/redColor" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
 

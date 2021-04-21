@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="statisticsViewModel"
+            type="com.uam.proyectocards.viewmodel.StatisticsViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/numberOfCards_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:text="@{String.format(@string/number_of_cards_stats, String.valueOf(statisticsViewModel.calculateNumberOfCards()))}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="Prueba" />
+
+        <TextView
+            android:id="@+id/numberOfDecks_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/numberOfCards_text"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:text="@{String.format(@string/number_of_decks_stats, String.valueOf(statisticsViewModel.calculateNumberOfDecks()))}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="Prueba" />
+        <TextView
+            android:id="@+id/easinessAverage_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/numberOfDecks_text"
+            android:layout_alignParentStart="true"
+            android:text="@{String.format(@string/number_of_decks_stats, String.valueOf(statisticsViewModel.calculateAverageEasinessOfEachDeck()))}"
+            tools:text="Prueba"/>
+</RelativeLayout>
+</layout>

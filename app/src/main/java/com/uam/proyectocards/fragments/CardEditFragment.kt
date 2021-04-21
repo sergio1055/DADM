@@ -1,4 +1,4 @@
-package com.uam.proyectocards
+package com.uam.proyectocards.fragments
 
 import android.os.Bundle
 import android.text.Editable
@@ -10,13 +10,17 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
+import com.uam.proyectocards.CardsApplication
+import com.uam.proyectocards.R
 import com.uam.proyectocards.databinding.FragmentCardEditBinding
+import com.uam.proyectocards.model.Card
 
 class CardEditFragment : Fragment() {
     lateinit var card : Card
     lateinit var binding: FragmentCardEditBinding
     lateinit var question: String
     lateinit var answer: String
+    var deckId : String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +34,13 @@ class CardEditFragment : Fragment() {
 
         binding = DataBindingUtil.inflate<FragmentCardEditBinding>(
                 inflater,
-                R.layout.fragment_card_edit,
+            R.layout.fragment_card_edit,
                 container,
                 false
         )
 
         val args = CardEditFragmentArgs.fromBundle(requireArguments())
+        deckId = args.deckId
         card = CardsApplication.getCard(args.cardId)!!
         binding.card = card
         question = card.question
@@ -74,13 +79,29 @@ class CardEditFragment : Fragment() {
 
         binding.acceptCardEditButton.setOnClickListener {
             Snackbar.make(it, R.string.create_card_text, Snackbar.LENGTH_LONG).show()
-            it.findNavController().navigate(R.id.action_cardEditFragment_to_cardListFragment2)
+            it.findNavController()
+                    .navigate(
+                        CardEditFragmentDirections.actionCardEditFragmentToCardListFragment2(deckId)
+                    )
         }
 
         binding.cancelCardEditButton.setOnClickListener {
             card.question = question
             card.answer = answer
-            it.findNavController().navigate(R.id.action_cardEditFragment_to_cardListFragment2)
+            it.findNavController()
+                    .navigate(
+                        CardEditFragmentDirections.actionCardEditFragmentToCardListFragment2(deckId)
+                    )
+        }
+
+        binding.removeCardButton.setOnClickListener {
+            CardsApplication.removeCard(card)
+            Snackbar.make(it, R.string.remove_card_text, Snackbar.LENGTH_LONG).show()
+
+            it.findNavController()
+                    .navigate(
+                        CardEditFragmentDirections.actionCardEditFragmentToCardListFragment2(deckId)
+                    )
         }
     }
 

@@ -4,7 +4,7 @@
     <data>
         <variable
             name="card"
-            type="com.uam.proyectocards.Card" />
+            type="com.uam.proyectocards.model.Card" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -19,10 +19,10 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:paddingTop="10dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="10dp">
+            android:paddingStart="@dimen/paddingLeft_itemCard_land"
+            android:paddingTop="@dimen/paddingTop_itemCard_land"
+            android:paddingEnd="@dimen/paddingRight_itemCard_land"
+            android:paddingBottom="@dimen/paddingBottom_itemCard_land">
 
             <TextView
                 android:id="@+id/list_item_question"
@@ -30,6 +30,13 @@
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
                 android:text="@{card.question}"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/list_item_date"
+                android:text="@string/hide_info_text" />
 
             <TextView
                 android:id="@+id/list_item_easiness"

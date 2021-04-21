@@ -1,4 +1,4 @@
-package com.uam.proyectocards
+package com.uam.proyectocards.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.uam.proyectocards.CardsApplication
+import com.uam.proyectocards.R
 import com.uam.proyectocards.databinding.FragmentTitleBinding
 
 class TitleFragment: Fragment() {
@@ -23,8 +25,8 @@ class TitleFragment: Fragment() {
             false)
 
         binding.cardsTitleTextView.setOnClickListener { view ->
-            if (CardsApplication.numberOfCardsLeft() > 0)
-                view.findNavController().navigate(R.id.action_titleFragment_to_cardListFragment)
+            if (CardsApplication.numberOfDecks() > 0)
+                view.findNavController().navigate(R.id.action_titleFragment_to_deckListFragment)
             else
                 Toast.makeText(activity, R.string.no_more_cards, Toast.LENGTH_SHORT).show()
         }

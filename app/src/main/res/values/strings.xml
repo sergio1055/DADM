@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">Cards</string>
-    <string name="question_text">Tree</string>
     <string name="answer_button_text">Check answer</string>
-    <string name="answer_text">Arbol</string>
     <string name="easy_button_title">Easy</string>
     <string name="doubt_button_title">Doubt</string>
     <string name="hard_button_title">Hard</string>
@@ -22,8 +20,22 @@
     <string name="decks_nav_menu_title">Mazes</string>
     <string name="study_nav_menu_title">Study</string>
     <string name="statistics_nav_menu_title">Statistics</string>
-    <string name="copyright">sergio.garcia02@estudiante.uam.es</string>
+    <string name="email">sergio.garcia02@estudiante.uam.es</string>
     <string name="accept_button_info">Accept</string>
     <string name="about_nav_menu_title">About</string>
     <string name="hide_info_text">More information</string>
+    <string name="deck_name_hint">Type a name</string>
+    <string name="create_deck_text">Deck added correctly</string>
+    <string name="remove_card_text">Card removed correctly</string>
+    <string name="remove_deck_text">Deck removed correctly</string>
+    <string name="remove_card_button_text">Remove card</string>
+    <string name="remove_deck_button_text">Remove deck</string>
+    <string name="info_app_about">The Cards application has been developed for the subject Development of Applications for mobile devices, the objective of which is to perform spaced learning with cards. You can add decks of cards and specific cards for each deck and study them.</string>
+    <string name="app_version">Version 0.5</string>
+    <string name="cards_no_more_cards">No more cards to show</string>
+    <string name="no_statistics_text">No stats to show</string>
+    <string name="number_of_cards_stats">Number of cards: %s</string>
+    <string name="number_of_decks_stats">Number of decks: %s</string>
+    <string name="easiness_stats">Average difficulty: %s</string>
+
 </resources>

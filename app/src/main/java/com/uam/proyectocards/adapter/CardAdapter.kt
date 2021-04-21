@@ -1,12 +1,15 @@
-package com.uam.proyectocards
+package com.uam.proyectocards.adapter
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.uam.proyectocards.model.Card
+import com.uam.proyectocards.CardsApplication
 import com.uam.proyectocards.databinding.ListItemCardBinding
+import com.uam.proyectocards.fragments.CardListFragmentDirections
 
 class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
     lateinit var binding : ListItemCardBinding
@@ -15,6 +18,8 @@ class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
             field = value
             notifyDataSetChanged()
         }
+
+    var deckId: String? = null
 
 
     inner class CardHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -29,8 +34,19 @@ class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
                 val id = card.id
                 it.findNavController()
                         .navigate(
-                            CardListFragmentDirections
-                                .actionCardListFragmentToCardEditFragment(id))
+                                CardListFragmentDirections.actionCardListFragmentToCardEditFragment(id, deckId))
+            }
+
+            binding.checkboxMoreInfo?.setOnCheckedChangeListener { buttonView, isChecked ->
+
+                if(isChecked && buttonView is CheckBox) {
+                    binding.listItemEasiness.visibility = View.VISIBLE
+                    binding.listItemNextDate?.visibility = View.VISIBLE
+                    binding.listItemInterval?.visibility = View.VISIBLE
+                    binding.checkboxMoreInfo!!.visibility = View.INVISIBLE
+                    notifyItemChanged(layoutPosition)
+                }
+
             }
         }
     }

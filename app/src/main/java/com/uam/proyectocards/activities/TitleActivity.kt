@@ -1,10 +1,11 @@
-package com.uam.proyectocards
+package com.uam.proyectocards.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.uam.proyectocards.R
 import com.uam.proyectocards.databinding.ActivityTitleBinding
 import timber.log.Timber
 

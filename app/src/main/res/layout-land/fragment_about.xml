@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/app_name"
-            android:textSize="@dimen/textSize_appName"
+            android:textSize="18sp"
             android:textStyle="bold" />
         <TextView
             android:id="@+id/about_info_copyright"
@@ -45,10 +45,11 @@
             android:id="@+id/starImageView"
             android:layout_width="@dimen/IMAGE_VIEW_DIMENSION_WIDTH"
             android:layout_height="@dimen/IMAGE_VIEW_DIMENSION_HEIGHT"
-            android:layout_above="@id/about_info_app"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
-            android:layout_marginTop="@dimen/marginTop_imageView"
-            android:layout_marginEnd="@dimen/marginEnd_imageView"
+            android:layout_marginTop="@dimen/marginTop_about_image"
+            android:layout_marginEnd="@dimen/marginEnd_aboutImage"
             app:srcCompat="@android:drawable/btn_star_big_on" />
     </RelativeLayout>
 </layout>
