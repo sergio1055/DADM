@@ -2,10 +2,8 @@ package com.uam.proyectocards.fragments
 
 import android.os.Build
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -27,6 +25,11 @@ class CardListFragment : Fragment() {
     private var deckId : Long = 0
     private val cardListViewModel by lazy {
         ViewModelProvider(this).get(CardListViewModel::class.java)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -75,5 +78,18 @@ class CardListFragment : Fragment() {
 
 
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.fragment_card_list, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.settings -> {
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

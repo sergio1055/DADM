@@ -41,5 +41,7 @@
     <string name="easiness_stats">Dificultad media: %s</string>
     <string name="update_card_text">Tarjeta actualizada correctamente</string>
     <string name="edit_deck">Editar</string>
+    <string name="settings">Ajustes</string>
+    <string name="log_out">Cerrar sesión</string>
 
 </resources>
