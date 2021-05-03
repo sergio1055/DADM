@@ -1,31 +1,37 @@
 package com.uam.proyectocards.viewmodel
 
+import android.app.Application
 import android.os.Build
 import androidx.annotation.RequiresApi
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
 import com.uam.proyectocards.CardsApplication
+import com.uam.proyectocards.database.CardDatabase
 import com.uam.proyectocards.model.Card
 import timber.log.Timber
 import java.time.LocalDateTime
+import java.util.concurrent.Executors
 
 @RequiresApi(Build.VERSION_CODES.O)
-class StudyViewModel : ViewModel() {
+class StudyViewModel(application: Application) : AndroidViewModel(application) {
+    private val executor = Executors.newSingleThreadExecutor()
+
+    private val context = getApplication<Application>().applicationContext
 
     @RequiresApi(Build.VERSION_CODES.O)
     var card: Card? = null
-    var cards: MutableList<Card> = mutableListOf<Card>()
-    private val _cardsLeft = MutableLiveData<Int>()
-    val cardsLeft : LiveData<Int>
-        get() = _cardsLeft
+    var cards: LiveData<List<Card>>  = CardDatabase.getInstance(context).cardDao.getCards()
+    var dueCard: LiveData<Card?> =
+        Transformations.map(cards, ::due)
+     val cardsLeft: LiveData<Int> =
+        Transformations.map(cards, ::left)
 
-    init {
-        Timber.i("MainViewModel created")
-        cards = CardsApplication.cards
-        card = random_card()
+    private fun left(cards: List<Card>) =
+        cards.filter { card -> card.isDue(LocalDateTime.now()) }.size
 
-        _cardsLeft.value = cards.size
+    private fun due(cards: List<Card>) = try {
+        cards.filter { card -> card.isDue(LocalDateTime.now()) }.random()
+    } catch (e: Exception) {
+        null
     }
 
     override fun onCleared() {
@@ -36,16 +42,9 @@ class StudyViewModel : ViewModel() {
     fun update(quality: Int) {
         card?.quality = quality
         card?.update(LocalDateTime.now())
-        card = random_card()
-        _cardsLeft.value = cardsLeft.value?.minus(1)
-        Timber.i("$cardsLeft.value")
-    }
 
-    private fun random_card() = try {
-        cards.filter { card ->
-            card.isDue(LocalDateTime.now())
-        }.random()
-    } catch (e: NoSuchElementException) {
-        null
+        executor.execute {
+            CardDatabase.getInstance(context).cardDao.update(card!!)
+        }
     }
 }

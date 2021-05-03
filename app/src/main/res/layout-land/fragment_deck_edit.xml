@@ -20,7 +20,7 @@
             android:layout_marginTop="100dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:text="@{String.format(@string/id_text, deck.id.substring(0,4)).toUpperCase()}"
+            android:text="@{@string/id_text_deck(deck.id)}"
             tools:text="ID: 10" />
 
         <com.google.android.material.textfield.TextInputLayout

@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.uam.proyectocards.R
@@ -18,7 +19,7 @@ import com.uam.proyectocards.databinding.FragmentStudyBinding
 class StudyFragment : Fragment() {
     lateinit var binding: FragmentStudyBinding
 
-    private val viewModel: StudyViewModel by lazy {
+    private val studyViewModel: StudyViewModel by lazy {
         ViewModelProvider(this).get(StudyViewModel::class.java)
     }
 
@@ -31,12 +32,14 @@ class StudyFragment : Fragment() {
             else -> 0
         }
 
-        viewModel.update(quality)
+        studyViewModel.update(quality)
 
-        if(viewModel.card == null) {
-            Toast.makeText(this.context, getString(R.string.cards_no_more_cards), Toast.LENGTH_LONG).show()
-            binding.answerButton.visibility = View.INVISIBLE
-            findNavController().navigate(R.id.action_studyFragment_to_deckListFragment)
+        if(studyViewModel.card == null) {
+            Toast.makeText(
+                this.context,
+                resources.getString(R.string.no_more_cards),
+                Toast.LENGTH_LONG
+            ).show()
         }
 
         binding.invalidateAll()
@@ -51,15 +54,22 @@ class StudyFragment : Fragment() {
                 false
         )
 
-        binding.studyViewModel= viewModel
         binding.answerButton.setOnClickListener {
-            viewModel.card?.answered = true
+            studyViewModel.card?.answered = true
             binding.invalidateAll()
         }
 
         binding.hardButton.setOnClickListener(listener)
         binding.easyButton.setOnClickListener(listener)
         binding.doubtButton.setOnClickListener(listener)
+
+        studyViewModel.dueCard.observe(
+            viewLifecycleOwner,
+            Observer {
+                studyViewModel.card = it
+                binding.studyViewModel = studyViewModel
+                binding.invalidateAll()
+            })
 
         return binding.root
     }

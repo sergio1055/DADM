@@ -2,16 +2,24 @@ package com.uam.proyectocards.model
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.time.LocalDateTime
 import java.util.*
 import kotlin.math.roundToLong
 
+@Entity(tableName = "cards_table")
+
 @RequiresApi(Build.VERSION_CODES.O)
 open class Card (
+    @ColumnInfo(name = "card_question")
     var question: String,
     var answer: String,
     var date: String = LocalDateTime.now().toString(),
+    @PrimaryKey
     var id: String = UUID.randomUUID().toString(),
+    var deckId : Long,
 ) {
     var quality: Int = 0
     var repetitions: Int = 0
@@ -27,8 +35,8 @@ open class Card (
             val question = tokens.get(1)
             val answer = tokens.get(2)
             val date = tokens.get(3)
-
-            return Card(question, answer, date=date)
+            val deckId = tokens.get(4).toLong()
+            return Card(question, answer, date=date, deckId=deckId)
         }
     }
 
@@ -75,7 +83,7 @@ open class Card (
     fun simulate(period : Long) {
         println("Simulacion de la tarjeta $question")
         /* Copia del mazo */
-        var card2 = Card(this.question, this.answer)
+        var card2 = Card(this.question, this.answer, deckId = this.deckId)
 
         /* Simulacion avanzada (testing) */
         var now = LocalDateTime.now()

@@ -20,7 +20,7 @@
             android:layout_marginTop="100dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:text="@{String.format(@string/id_text, deck.id.substring(0,4)).toUpperCase()}"
+            android:text="@{@string/id_text_deck(deck.id)}"
             tools:text="ID: 10" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -74,13 +74,6 @@
                 android:text="@string/cancel_card_edit_button_title"
                 android:textColor="@color/redColor" />
 
-            <Button
-                android:id="@+id/remove_card_button"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/remove_deck_button_text"
-                android:textColor="@color/redColor" />
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
 

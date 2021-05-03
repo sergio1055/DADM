@@ -4,7 +4,7 @@
     <data>
         <variable
             name="deck"
-            type="com.uam.proyectocards.model.Deck" />
+            type="com.uam.proyectocards.model.DeckWithCards" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -29,7 +29,7 @@
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:text="@{deck.name}"/>
+                android:text="@{deck.component1().name}"/>
 
             <CheckBox
                 android:id="@+id/checkbox_remove"

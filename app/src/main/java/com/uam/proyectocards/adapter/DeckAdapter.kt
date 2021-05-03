@@ -1,22 +1,24 @@
 package com.uam.proyectocards.adapter
 
 
+import android.app.Application
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.uam.proyectocards.CardsApplication
-import com.uam.proyectocards.R
+import com.uam.proyectocards.database.CardDatabase
 import com.uam.proyectocards.databinding.ListItemDeckBinding
 import com.uam.proyectocards.fragments.DeckListFragmentDirections
-import com.uam.proyectocards.model.Deck
+import com.uam.proyectocards.model.DeckWithCards
+import java.util.concurrent.Executors
 
 class DeckAdapter() : RecyclerView.Adapter<DeckAdapter.DeckHolder>() {
     lateinit var binding : ListItemDeckBinding
 
-    var data =  listOf<Deck>()
+    private val executor = Executors.newSingleThreadExecutor()
+
+    var data =  listOf<DeckWithCards>()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -24,16 +26,15 @@ class DeckAdapter() : RecyclerView.Adapter<DeckAdapter.DeckHolder>() {
 
 
     inner class DeckHolder(view: View) : RecyclerView.ViewHolder(view) {
-        lateinit var deck: Deck
-        fun bind(deck: Deck) {
+        lateinit var deck: DeckWithCards
+        fun bind(deck: DeckWithCards) {
             this.deck = deck
             binding.deck = deck
         }
 
         init {
             binding.listDeckName.setOnClickListener {
-                val id = deck.id
-                CardsApplication.cards = deck.cards
+                val id = deck.deck.id
                 it.findNavController()
                     .navigate(
                         DeckListFragmentDirections
@@ -41,11 +42,10 @@ class DeckAdapter() : RecyclerView.Adapter<DeckAdapter.DeckHolder>() {
             }
 
             binding.checkboxRemove.setOnCheckedChangeListener { buttonView, isChecked ->
-                CardsApplication.removeDeck(deck)
                 notifyItemRemoved(absoluteAdapterPosition)
             }
 
-            }
+        }
     }
 
 

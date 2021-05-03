@@ -7,9 +7,9 @@ import android.widget.CheckBox
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.uam.proyectocards.model.Card
-import com.uam.proyectocards.CardsApplication
 import com.uam.proyectocards.databinding.ListItemCardBinding
 import com.uam.proyectocards.fragments.CardListFragmentDirections
+import com.uam.proyectocards.model.DeckWithCards
 
 class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
     lateinit var binding : ListItemCardBinding
@@ -18,8 +18,7 @@ class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
             field = value
             notifyDataSetChanged()
         }
-
-    var deckId: String? = null
+    var deckId : Long = 0
 
 
     inner class CardHolder(view: View) : RecyclerView.ViewHolder(view) {

@@ -42,19 +42,4 @@ class StatisticsViewModel : ViewModel() {
         return decks.size
     }
 
-    fun calculateAverageEasinessOfEachDeck() : Double{
-        var sum : Double = 0.0
-        var numCards: Int = 0
-        decks.forEach  {
-            it.cards.forEach {
-                sum =+ it.easiness
-            }
-
-            numCards =+ it.cards.size
-        }
-
-        return sum/numCards
-    }
-
-
 }

@@ -11,6 +11,7 @@
     <string name="no_more_cards">No hay mas cartas para mostrar</string>
     <string name="studyButtonText">Estudia</string>
     <string name="id_text">ID: %s</string>
+    <string name="id_text_deck">ID: %d</string>
     <string name="question_textView">Pregunta</string>
     <string name="answer_textView">Answer</string>
     <string name="accept_card_edit_button_title">Aceptar</string>
@@ -38,4 +39,6 @@
     <string name="no_statistics_text">No hay estadísticas para mostrar</string>
     <string name="number_of_decks_stats">Numero de mazos: %s</string>
     <string name="easiness_stats">Dificultad media: %s</string>
+    <string name="update_card_text">Tarjeta actualizada correctamente</string>
+
 </resources>

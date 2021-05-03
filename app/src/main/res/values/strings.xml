@@ -10,6 +10,7 @@
     <string name="no_more_cards">No more cards to show</string>
     <string name="studyButtonText">Study</string>
     <string name="id_text">ID: %s</string>
+    <string name="id_text_deck">ID: %ld</string>
     <string name="question_textView">Question</string>
     <string name="answer_textView">Answer</string>
     <string name="accept_card_edit_button_title">Accept</string>
@@ -37,5 +38,6 @@
     <string name="number_of_cards_stats">Number of cards: %s</string>
     <string name="number_of_decks_stats">Number of decks: %s</string>
     <string name="easiness_stats">Average difficulty: %s</string>
+    <string name="update_card_text">Card updated correctly</string>
 
 </resources>

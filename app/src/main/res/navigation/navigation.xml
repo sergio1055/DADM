@@ -53,14 +53,13 @@
             android:id="@+id/action_cardListFragment_pop_including_deckListFragment"
             app:popUpTo="@id/deckListFragment"
             app:popUpToInclusive="true" />
-        <argument
-            android:name="deckId"
-            app:argType="string"
-            app:nullable="true" />
         <action
             android:id="@+id/action_cardListFragment_pop_including_deckListFragment2"
             app:popUpTo="@id/deckListFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="deckId"
+            app:argType="long" />
     </fragment>
 
     <fragment
@@ -81,14 +80,13 @@
             android:id="@+id/action_cardEditFragment_pop_including_cardListFragment"
             app:popUpTo="@id/cardListFragment"
             app:popUpToInclusive="true" />
-        <argument
-            android:name="deckId"
-            app:argType="string"
-            app:nullable="true" />
         <action
             android:id="@+id/action_cardEditFragment_pop_including_cardListFragment2"
             app:popUpTo="@id/cardListFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="deckId"
+            app:argType="long" />
     </fragment>
 
     <fragment
@@ -110,7 +108,7 @@
         <action android:id="@+id/action_deckListFragment_to_cardListFragment" />
         <argument
             android:name="deckId"
-            app:argType="string" />
+            app:argType="long" />
         <action
             android:id="@+id/action_deckListFragment_to_cardListFragment2"
             app:destination="@id/cardListFragment" />
@@ -124,9 +122,6 @@
         android:name="com.uam.proyectocards.fragments.DeckEditFragment"
         android:label="DeckEditFragment"
         tools:layout="@layout/fragment_deck_edit">
-        <argument
-            android:name="deckId"
-            app:argType="string" />
         <action
             android:id="@+id/action_deckEditFragment_to_deckListFragment"
             app:popUpTo="@id/deckListFragment" />
@@ -134,6 +129,9 @@
             android:id="@+id/action_deckEditFragment_pop_including_deckListFragment"
             app:popUpTo="@id/deckListFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="deckId"
+            app:argType="long" />
     </fragment>
     <fragment
         android:id="@+id/statisticsFragment2"

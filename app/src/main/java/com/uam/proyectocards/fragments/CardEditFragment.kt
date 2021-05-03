@@ -1,58 +1,76 @@
 package com.uam.proyectocards.fragments
 
+import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
-import com.uam.proyectocards.CardsApplication
 import com.uam.proyectocards.R
+import com.uam.proyectocards.database.CardDatabase
 import com.uam.proyectocards.databinding.FragmentCardEditBinding
 import com.uam.proyectocards.model.Card
+import com.uam.proyectocards.viewmodel.CardEditViewModel
+import java.util.concurrent.Executors
 
 class CardEditFragment : Fragment() {
-    lateinit var card : Card
+    private val executor = Executors.newSingleThreadExecutor()
+    lateinit var card: Card
     lateinit var binding: FragmentCardEditBinding
     lateinit var question: String
     lateinit var answer: String
-    var deckId : String? = null
+    var deckId : Long = 0
+
+    private val cardEditviewModel by lazy {
+        ViewModelProvider(this).get(CardEditViewModel::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
 
         binding = DataBindingUtil.inflate<FragmentCardEditBinding>(
-                inflater,
+            inflater,
             R.layout.fragment_card_edit,
-                container,
-                false
+            container,
+            false
         )
 
         val args = CardEditFragmentArgs.fromBundle(requireArguments())
         deckId = args.deckId
-        card = CardsApplication.getCard(args.cardId)!!
-        binding.card = card
-        question = card.question
-        answer = card.answer
+
+        cardEditviewModel.loadCardId(args.cardId)
+        cardEditviewModel.card.observe(
+            viewLifecycleOwner,
+            Observer {
+                card = it
+                binding.card = card
+                question = card.question
+                answer = card.answer
+            }
+        )
 
 
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onStart() {
         super.onStart()
-        String.format(getResources().getString(R.string.id_text), card.id.substring(0,4))
         val questionTextWatcher = object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {}
 
@@ -78,31 +96,51 @@ class CardEditFragment : Fragment() {
 
 
         binding.acceptCardEditButton.setOnClickListener {
-            Snackbar.make(it, R.string.create_card_text, Snackbar.LENGTH_LONG).show()
+            val cardDatabase =
+                CardDatabase.getInstance(context = cardEditviewModel.getApplication())
+            executor.execute {
+                cardDatabase.cardDao.update(card)
+            }
+
+            Snackbar.make(it, R.string.update_card_text, Snackbar.LENGTH_LONG).show()
+
             it.findNavController()
-                    .navigate(
-                        CardEditFragmentDirections.actionCardEditFragmentToCardListFragment2(deckId)
-                    )
+                .navigate(
+                    CardEditFragmentDirections.actionCardEditFragmentToCardListFragment2(deckId)
+                )
         }
 
         binding.cancelCardEditButton.setOnClickListener {
             card.question = question
             card.answer = answer
+
+            if (card.question == "" || card.answer == "") {
+                val cardDatabase =
+                    CardDatabase.getInstance(context = cardEditviewModel.getApplication())
+                executor.execute {
+                    cardDatabase.cardDao.removeCard(card)
+                }
+            }
             it.findNavController()
-                    .navigate(
-                        CardEditFragmentDirections.actionCardEditFragmentToCardListFragment2(deckId)
-                    )
+                .navigate(
+                    CardEditFragmentDirections.actionCardEditFragmentToCardListFragment2(deckId)
+                )
         }
 
         binding.removeCardButton.setOnClickListener {
-            CardsApplication.removeCard(card)
+            val cardDatabase =
+                CardDatabase.getInstance(context = cardEditviewModel.getApplication())
+
+            executor.execute {
+                cardDatabase.cardDao.removeCard(card)
+            }
+
             Snackbar.make(it, R.string.remove_card_text, Snackbar.LENGTH_LONG).show()
 
             it.findNavController()
-                    .navigate(
-                        CardEditFragmentDirections.actionCardEditFragmentToCardListFragment2(deckId)
-                    )
+                .navigate(
+                    CardEditFragmentDirections.actionCardEditFragmentToCardListFragment2(deckId)
+                )
         }
     }
-
 }
