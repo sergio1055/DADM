@@ -43,5 +43,10 @@
     <string name="edit_deck">Editar</string>
     <string name="settings">Ajustes</string>
     <string name="log_out">Cerrar sesión</string>
+    <string name="decks_header">Mazos</string>
+    <string name="max_number_cards">Máximo numero de tarjetas</string>
+    <string name="board_summary_off">Tablero no disponible</string>
+    <string name="board_summary_on">Tablero disponible</string>
+    <string name="board_title">Mostrar tablero</string>
 
 </resources>

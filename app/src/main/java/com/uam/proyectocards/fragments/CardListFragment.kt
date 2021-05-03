@@ -1,5 +1,6 @@
 package com.uam.proyectocards.fragments
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.*
@@ -10,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.uam.proyectocards.R
+import com.uam.proyectocards.activities.SettingsActivity
 import com.uam.proyectocards.adapter.CardAdapter
 import com.uam.proyectocards.database.CardDatabase
 import com.uam.proyectocards.databinding.FragmentCardListBinding
@@ -88,6 +90,7 @@ class CardListFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.settings -> {
+                startActivity(Intent(activity, SettingsActivity::class.java))
             }
         }
         return super.onOptionsItemSelected(item)
