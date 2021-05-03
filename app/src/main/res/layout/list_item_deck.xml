@@ -31,12 +31,13 @@
                 android:layout_width="wrap_content"
                 android:text="@{deck.component1().name}"/>
 
-            <CheckBox
-                android:id="@+id/checkbox_remove"
+            <TextView
+                android:id="@+id/edit_deck"
+                android:textAppearance="?attr/textAppearanceBody2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:text="@string/remove_deck_button_text" />
+                android:text="@string/edit_deck" />
 
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>

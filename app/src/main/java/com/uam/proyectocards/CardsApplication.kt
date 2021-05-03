@@ -26,44 +26,5 @@ class CardsApplication : Application() {
     companion object {
         var cards: MutableList<Card> = mutableListOf<Card>()
         var decks: MutableList<Deck> = mutableListOf<Deck>()
-
-
-        fun getCard(cardId: String): Card? {
-
-            cards.forEach() {
-                if (it.id == cardId) {
-                    return it
-                }
-            }
-
-            return null
-        }
-
-        fun addCard(card: Card) {
-
-            if (!cards.contains(card)) {
-                cards.add(card)
-            }
-        }
-
-        fun addDeck(deck: Deck) {
-            if (!decks.contains(deck)) {
-                decks.add(deck)
-            }
-        }
-
-        fun getDeck(deckId: Long): Deck? {
-            decks.forEach() {
-                if (it.id == deckId) {
-                    return it
-                }
-            }
-
-            return null
-        }
-
-        fun numberOfDecks(): Int {
-            return decks.size
-        }
     }
 }

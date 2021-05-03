@@ -43,9 +43,9 @@ class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
                     binding.listItemNextDate?.visibility = View.VISIBLE
                     binding.listItemInterval?.visibility = View.VISIBLE
                     binding.checkboxMoreInfo!!.visibility = View.INVISIBLE
-                    notifyItemChanged(layoutPosition)
                 }
 
+                notifyItemChanged(layoutPosition)
             }
         }
     }

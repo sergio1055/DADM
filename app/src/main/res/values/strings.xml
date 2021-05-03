@@ -39,5 +39,6 @@
     <string name="number_of_decks_stats">Number of decks: %s</string>
     <string name="easiness_stats">Average difficulty: %s</string>
     <string name="update_card_text">Card updated correctly</string>
+    <string name="edit_deck">Edit</string>
 
 </resources>

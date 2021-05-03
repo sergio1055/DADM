@@ -31,16 +31,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8613e6c-9538-4ab8-a56a-cc37c47721e9" name="Default Changelist" comment="Final entrega 1">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/database/CardDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/database/CardDatabase.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/model/DeckWithCards.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/viewmodel/CardEditViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/viewmodel/CardListViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/viewmodel/DeckEditViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/viewmodel/DeckListViewModel.kt" afterDir="false" />
+    <list default="true" id="e8613e6c-9538-4ab8-a56a-cc37c47721e9" name="Default Changelist" comment="Fixing CardEditFragment and DeckEditFragment">
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -52,43 +43,24 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/CardsApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/CardsApplication.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/adapter/CardAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/adapter/CardAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/adapter/DeckAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/adapter/DeckAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/CardEditFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/CardEditFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/CardListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/CardListFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/DeckEditFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/DeckEditFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/DeckListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/DeckListFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/StudyFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/StudyFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/TitleFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/fragments/TitleFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/model/Card.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/model/Card.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/model/Cloze.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/model/Cloze.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/model/Deck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/model/Deck.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/viewmodel/StatisticsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/viewmodel/StatisticsViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/viewmodel/StudyViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uam/proyectocards/viewmodel/StudyViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_deck_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_deck_edit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_statistics.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/list_item_deck.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/list_item_deck.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_deck_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_deck_edit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_statistics.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_deck.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_deck.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R58N302TQ0K]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -304,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618138296377</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixing CardEditFragment and DeckEditFragment">
+      <created>1620039388804</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620039388804</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +306,8 @@
     <MESSAGE value="Add fragmentcardlist" />
     <MESSAGE value="Lesson 26" />
     <MESSAGE value="About fragment and improve UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="About fragment and improve UI" />
+    <MESSAGE value="Fixing CardEditFragment and DeckEditFragment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing CardEditFragment and DeckEditFragment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="516" y="377" width="950" height="537" key="#PSD" timestamp="1619029160529">
@@ -342,10 +322,10 @@
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
     <state x="749" y="430" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618169830737" />
-    <state x="690" y="472" width="601" height="346" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1618173994794">
+    <state x="690" y="472" width="601" height="346" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1620039336599">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="690" y="472" width="601" height="346" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618173994794" />
+    <state x="690" y="472" width="601" height="346" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620039336599" />
     <state x="172" y="202" width="1648" height="880" key="AVDManager" timestamp="1618169856799">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
@@ -359,35 +339,35 @@
     </state>
     <state x="579" y="400" width="824" height="491" key="AndroidCreateResourceFileDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618173274207" />
     <state x="433" y="302" key="AndroidCreateResourceFileDialog/67.27.1213.997@67.27.1213.997" timestamp="1617955621601" />
-    <state x="813" y="451" width="386" height="388" key="AndroidCreateXmlResourceDialog" timestamp="1620036847271">
+    <state x="813" y="451" width="386" height="388" key="AndroidCreateXmlResourceDialog" timestamp="1620039776555">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="813" y="451" width="386" height="388" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620036847271" />
+    <state x="813" y="451" width="386" height="388" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620039776555" />
     <state x="581" y="349" width="356" height="359" key="AndroidCreateXmlResourceDialog/67.27.1213.997@67.27.1213.997" timestamp="1617955737387" />
     <state x="616" y="378" width="424" height="484" key="FileChooserDialogImpl" timestamp="1618173784450">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
     <state x="616" y="378" key="FileChooserDialogImpl/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618173784450" />
     <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1617954775470" />
-    <state width="1802" height="239" key="GridCell.Tab.0.bottom" timestamp="1620038222938">
+    <state width="1802" height="239" key="GridCell.Tab.0.bottom" timestamp="1620041028291">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="239" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620038222938" />
+    <state width="1802" height="239" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620041028291" />
     <state width="1167" height="260" key="GridCell.Tab.0.bottom/67.27.1213.997@67.27.1213.997" timestamp="1617956059669" />
-    <state width="1802" height="239" key="GridCell.Tab.0.center" timestamp="1620038222938">
+    <state width="1802" height="239" key="GridCell.Tab.0.center" timestamp="1620041028291">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="239" key="GridCell.Tab.0.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620038222938" />
+    <state width="1802" height="239" key="GridCell.Tab.0.center/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620041028291" />
     <state width="1167" height="260" key="GridCell.Tab.0.center/67.27.1213.997@67.27.1213.997" timestamp="1617956059669" />
-    <state width="1802" height="239" key="GridCell.Tab.0.left" timestamp="1620038222938">
+    <state width="1802" height="239" key="GridCell.Tab.0.left" timestamp="1620041028291">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="239" key="GridCell.Tab.0.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620038222938" />
+    <state width="1802" height="239" key="GridCell.Tab.0.left/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620041028291" />
     <state width="1167" height="260" key="GridCell.Tab.0.left/67.27.1213.997@67.27.1213.997" timestamp="1617956059669" />
-    <state width="1802" height="239" key="GridCell.Tab.0.right" timestamp="1620038222938">
+    <state width="1802" height="239" key="GridCell.Tab.0.right" timestamp="1620041028291">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state width="1802" height="239" key="GridCell.Tab.0.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620038222938" />
+    <state width="1802" height="239" key="GridCell.Tab.0.right/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620041028291" />
     <state width="1167" height="260" key="GridCell.Tab.0.right/67.27.1213.997@67.27.1213.997" timestamp="1617956059669" />
     <state width="1802" height="399" key="GridCell.Tab.1.bottom" timestamp="1619455813083">
       <screen x="0" y="102" width="1920" height="1080" />
@@ -409,10 +389,10 @@
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
     <state x="223" y="195" width="1536" height="901" key="MergeDialog/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618133927077" />
-    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1618138305059">
+    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1620039394617">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>
-    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1618138305059" />
+    <state x="591" y="378" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.102.1920.1080@0.102.1920.1080" timestamp="1620039394617" />
     <state x="653" y="324" width="676" height="642" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1619452674371">
       <screen x="0" y="102" width="1920" height="1080" />
     </state>

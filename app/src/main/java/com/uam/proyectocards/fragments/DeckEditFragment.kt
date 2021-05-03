@@ -84,7 +84,7 @@ class DeckEditFragment : Fragment() {
         binding.cancelDeckEditButton?.setOnClickListener {
             deck.name = name
 
-            if(deck.name == "") {
+            if (deck.name == "") {
                 val cardDatabase =
                     CardDatabase.getInstance(context = deckEditViewModel.getApplication())
                 executor.execute {
@@ -94,5 +94,20 @@ class DeckEditFragment : Fragment() {
 
             it.findNavController().navigate(R.id.action_deckEditFragment_to_deckListFragment)
         }
+
+        binding.removeDeckButton.setOnClickListener {
+            val cardDatabase =
+                CardDatabase.getInstance(context = deckEditViewModel.getApplication())
+
+            executor.execute {
+                cardDatabase.cardDao.removeDeck(deck)
+            }
+
+            Snackbar.make(it, R.string.remove_deck_text, Snackbar.LENGTH_LONG).show()
+
+            it.findNavController().navigate(R.id.action_deckEditFragment_to_deckListFragment)
+
+        }
+
     }
 }
