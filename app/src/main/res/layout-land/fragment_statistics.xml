@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="statisticsViewModel"
-            type="com.uam.proyectocards.viewmodel.StatisticsViewModel" />
+            type="es.uam.dadm.sergiogarcia.projectcards.viewmodel.StatisticsViewModel" />
     </data>
     <RelativeLayout
         android:layout_width="match_parent"

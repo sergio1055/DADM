@@ -4,7 +4,7 @@
 
         <variable
             name="card"
-            type="com.uam.proyectocards.model.Card"/>
+            type="es.uam.dadm.sergiogarcia.projectcards.model.Card"/>
     </data>
 
     <RelativeLayout

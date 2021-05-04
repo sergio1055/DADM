@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/titleFragment"
-        android:name="com.uam.proyectocards.fragments.TitleFragment"
+        android:name="es.uam.dadm.sergiogarcia.projectcards.fragments.TitleFragment"
         android:label="TitleFragment"
         tools:layout="@layout/fragment_title" >
         <action
@@ -26,7 +26,7 @@
 
     <fragment
         android:id="@+id/studyFragment"
-        android:name="com.uam.proyectocards.fragments.StudyFragment"
+        android:name="es.uam.dadm.sergiogarcia.projectcards.fragments.StudyFragment"
         android:label="StudyFragment"
         tools:layout="@layout/fragment_study">
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/cardListFragment"
-        android:name="com.uam.proyectocards.fragments.CardListFragment"
+        android:name="es.uam.dadm.sergiogarcia.projectcards.fragments.CardListFragment"
         android:label="fragment_card_list2"
         tools:layout="@layout/list_item_card" >
         <action
@@ -64,7 +64,7 @@
 
     <fragment
         android:id="@+id/cardEditFragment"
-        android:name="com.uam.proyectocards.fragments.CardEditFragment"
+        android:name="es.uam.dadm.sergiogarcia.projectcards.fragments.CardEditFragment"
         android:label="CardEditFragment"
         tools:layout="@layout/fragment_card_edit">
         <action
@@ -91,12 +91,12 @@
 
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.uam.proyectocards.fragments.AboutFragment"
+        android:name="es.uam.dadm.sergiogarcia.projectcards.fragments.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/deckListFragment"
-        android:name="com.uam.proyectocards.fragments.DeckListFragment"
+        android:name="es.uam.dadm.sergiogarcia.projectcards.fragments.DeckListFragment"
         android:label="DeckListFragment"
         tools:layout="@layout/fragment_deck_list">
         <action
@@ -119,7 +119,7 @@
     </fragment>
     <fragment
         android:id="@+id/deckEditFragment"
-        android:name="com.uam.proyectocards.fragments.DeckEditFragment"
+        android:name="es.uam.dadm.sergiogarcia.projectcards.fragments.DeckEditFragment"
         android:label="DeckEditFragment"
         tools:layout="@layout/fragment_deck_edit">
         <action
@@ -135,7 +135,7 @@
     </fragment>
     <fragment
         android:id="@+id/statisticsFragment2"
-        android:name="com.uam.proyectocards.fragments.StatisticsFragment"
+        android:name="es.uam.dadm.sergiogarcia.projectcards.fragments.StatisticsFragment"
         android:label="StatisticsFragment"
         tools:layout="@layout/fragment_statistics">
         <action

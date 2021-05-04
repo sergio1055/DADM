@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "293597173500",
+    "project_id": "sergiogarciagarciacards",
+    "storage_bucket": "sergiogarciagarciacards.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293597173500:android:260518428d93ab58d5e979",
+        "android_client_info": {
+          "package_name": "es.uam.dadm.sergiogarcia.projectcards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293597173500-3padmd5ts8g4tv4cte4onusdubn79mls.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.uam.dadm.sergiogarcia.projectcards",
+            "certificate_hash": "d25a6e479222a526218658650af914ad55edd10a"
+          }
+        },
+        {
+          "client_id": "293597173500-uq304nauhifm0i6e71pgglobk95t0rkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlQI92FpIZCxLOkPTanJh9gNTOuZDVW-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293597173500-uq304nauhifm0i6e71pgglobk95t0rkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

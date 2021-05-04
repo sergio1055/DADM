@@ -7,7 +7,7 @@
 
         <fragment
             android:id="@+id/studyFragment"
-            android:name="com.uam.proyectocards.fragments.StudyFragment"
+            android:name="es.uam.dadm.sergiogarcia.projectcards.fragments.StudyFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>

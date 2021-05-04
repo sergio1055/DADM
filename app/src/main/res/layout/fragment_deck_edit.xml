@@ -5,7 +5,7 @@
 
         <variable
             name="deck"
-            type="com.uam.proyectocards.model.Deck"/>
+            type="es.uam.dadm.sergiogarcia.projectcards.model.Deck"/>
     </data>
 
     <RelativeLayout

@@ -1,0 +1,45 @@
+package es.uam.dadm.sergiogarcia.projectcards.viewmodel
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import es.uam.dadm.sergiogarcia.projectcards.CardsApplication
+import es.uam.dadm.sergiogarcia.projectcards.model.Card
+import es.uam.dadm.sergiogarcia.projectcards.model.Deck
+import timber.log.Timber
+
+class StatisticsViewModel : ViewModel() {
+
+    var cards : MutableList<Card> = mutableListOf<Card>()
+    var decks : MutableList<Deck> = mutableListOf<Deck>()
+    private val _numberofCards = MutableLiveData<Int>()
+    private val _numberofDecks = MutableLiveData<Int>()
+
+    val numberofCards: LiveData<Int>
+        get() = _numberofCards
+
+    val numberofDecks: LiveData<Int>
+        get() = _numberofDecks
+
+    init {
+        cards = CardsApplication.cards
+        decks = CardsApplication.decks
+
+        _numberofCards.value = cards.size
+        _numberofDecks.value = decks.size
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        Timber.i("StatisticsViewModel destroyed")
+    }
+
+    fun calculateNumberOfCards() : Int {
+        return cards.size
+    }
+
+    fun calculateNumberOfDecks() : Int {
+        return decks.size
+    }
+
+}
