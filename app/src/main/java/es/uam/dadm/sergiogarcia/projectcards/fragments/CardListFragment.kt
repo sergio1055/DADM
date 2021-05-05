@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.google.firebase.database.FirebaseDatabase
 import es.uam.dadm.sergiogarcia.projectcards.R
 import es.uam.dadm.sergiogarcia.projectcards.activities.SettingsActivity
 import es.uam.dadm.sergiogarcia.projectcards.adapter.CardAdapter
@@ -22,6 +23,11 @@ import java.util.concurrent.Executors
 
 class CardListFragment : Fragment() {
     private val executor = Executors.newSingleThreadExecutor()
+    private val DATABASENAME = "tarjetas"
+
+    private var reference = FirebaseDatabase
+        .getInstance()
+        .getReference(DATABASENAME)
 
     private lateinit var adapter: CardAdapter
     private var deckId : Long = 0
@@ -59,6 +65,8 @@ class CardListFragment : Fragment() {
             executor.execute {
                 CardDatabase.getInstance(cardListViewModel.getApplication()).cardDao.addCard(card)
             }
+
+            reference.child(card.id).setValue(card)
 
             // Navega al fragmento CardEditFragment
             // pasando el id de card como argumento

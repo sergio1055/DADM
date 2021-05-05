@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "293597173500",
+    "firebase_url": "https://sergiogarciagarciacards-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "sergiogarciagarciacards",
     "storage_bucket": "sergiogarciagarciacards.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:293597173500:android:260518428d93ab58d5e979",
+        "mobilesdk_app_id": "1:293597173500:android:adfcef67c0a6a32bd5e979",
         "android_client_info": {
           "package_name": "es.uam.dadm.sergiogarcia.projectcards"
         }

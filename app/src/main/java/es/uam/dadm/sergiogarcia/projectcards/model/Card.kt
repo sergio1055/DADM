@@ -20,7 +20,9 @@ open class Card (
     @PrimaryKey
     var id: String = UUID.randomUUID().toString(),
     var deckId : Long,
+
 ) {
+
     var quality: Int = 0
     var repetitions: Int = 0
     var interval: Long = 1L

@@ -53,6 +53,7 @@ class StudyFragment : Fragment() {
                 false
         )
 
+
         binding.answerButton.setOnClickListener {
             studyViewModel.card?.answered = true
             binding.invalidateAll()
