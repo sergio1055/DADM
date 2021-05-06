@@ -41,6 +41,7 @@ class StudyFragment : Fragment() {
             ).show()
         }
 
+
         binding.invalidateAll()
     }
 
@@ -52,7 +53,6 @@ class StudyFragment : Fragment() {
                 container,
                 false
         )
-
 
         binding.answerButton.setOnClickListener {
             studyViewModel.card?.answered = true

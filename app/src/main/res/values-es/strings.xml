@@ -48,5 +48,8 @@
     <string name="board_summary_off">Tablero no disponible</string>
     <string name="board_summary_on">Tablero disponible</string>
     <string name="board_title">Mostrar tablero</string>
+    <string name="stats_deck">Estadisticas</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="card_stats_easiness">"Card Easiness"</string>
 
 </resources>

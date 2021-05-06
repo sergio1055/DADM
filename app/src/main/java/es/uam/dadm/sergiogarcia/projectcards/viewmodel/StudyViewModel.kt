@@ -4,6 +4,7 @@ import android.app.Application
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.*
+import es.uam.dadm.sergiogarcia.projectcards.activities.SettingsActivity
 import es.uam.dadm.sergiogarcia.projectcards.database.CardDatabase
 import es.uam.dadm.sergiogarcia.projectcards.model.Card
 import timber.log.Timber
@@ -28,7 +29,15 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         cards.filter { card -> card.isDue(LocalDateTime.now()) }.size
 
     private fun due(cards: List<Card>) = try {
-        cards.filter { card -> card.isDue(LocalDateTime.now()) }.random()
+        if(cards.size > SettingsActivity.getMaximumNumberOfCards(context)?.toInt()!!) {
+            val cardsWithCutoff = cards.subList(0, SettingsActivity.getMaximumNumberOfCards(context)?.toInt()!!)
+            cardsWithCutoff.filter { card -> card.isDue(LocalDateTime.now()) }.random()
+        }
+
+        else {
+            cards.filter { card -> card.isDue(LocalDateTime.now()) }.random()
+        }
+
     } catch (e: Exception) {
         null
     }

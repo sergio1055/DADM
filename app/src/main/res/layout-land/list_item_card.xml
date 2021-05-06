@@ -31,12 +31,13 @@
                 android:layout_width="wrap_content"
                 android:text="@{card.question}"/>
 
-            <CheckBox
-                android:id="@+id/checkbox_remove"
+            <TextView
+                android:id="@+id/more_info_text"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@id/list_item_date"
-                android:text="@string/hide_info_text" />
+                android:layout_height="match_parent"
+                android:text="@string/hide_info_text"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:layout_toStartOf="@id/list_item_date"/>
 
             <TextView
                 android:id="@+id/list_item_easiness"

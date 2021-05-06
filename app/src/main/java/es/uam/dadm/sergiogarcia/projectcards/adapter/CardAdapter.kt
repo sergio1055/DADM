@@ -35,16 +35,14 @@ class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
                                 CardListFragmentDirections.actionCardListFragmentToCardEditFragment(id, deckId))
             }
 
-            binding.checkboxMoreInfo?.setOnCheckedChangeListener { buttonView, isChecked ->
+            binding.moreInfoText.setOnClickListener {
 
-                if(isChecked && buttonView is CheckBox) {
                     binding.listItemEasiness.visibility = View.VISIBLE
                     binding.listItemNextDate?.visibility = View.VISIBLE
                     binding.listItemInterval?.visibility = View.VISIBLE
-                    binding.checkboxMoreInfo!!.visibility = View.INVISIBLE
-                }
+                    binding.moreInfoText.visibility = View.INVISIBLE
 
-                notifyItemChanged(layoutPosition)
+                    notifyItemChanged(layoutPosition)
             }
         }
     }

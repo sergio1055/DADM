@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="card"
-            type="es.uam.dadm.sergiogarcia.projectcards.model.Card" />
+            name="cardListViewModel"
+            type="es.uam.dadm.sergiogarcia.projectcards.model.DeckWithCards" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -31,13 +31,14 @@
             android:layout_width="wrap_content"
             android:text="@{card.question}"/>
 
-        <CheckBox
-            android:id="@+id/checkbox_more_info"
+        <TextView
+            android:id="@+id/more_info_text"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/list_item_date"
             android:text="@string/hide_info_text"
-            android:textAppearance="?attr/textAppearanceBody2"
-            android:layout_toEndOf="@id/list_item_question"/>
+            android:textAppearance="?attr/textAppearanceBody2" />
 
         <TextView
             android:id="@+id/list_item_nextDate"

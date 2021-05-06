@@ -38,8 +38,8 @@ class DeckListFragment : Fragment() {
                 false)
 
         adapter = DeckAdapter()
-        adapter.data = emptyList()
         binding.deckRecyclerView?.adapter = adapter
+        adapter.data = emptyList()
 
 
         binding.newCardFab.setOnClickListener {
@@ -54,12 +54,15 @@ class DeckListFragment : Fragment() {
                         .actionDeckListFragmentToDeckEditFragment(deck.id))
         }
 
+
         deckListViewModel.decks.observe(
             viewLifecycleOwner,
             Observer {
                 adapter.data = it
                 adapter.notifyDataSetChanged()
             })
+
+
 
         return binding.root
     }

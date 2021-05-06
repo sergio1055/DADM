@@ -18,8 +18,6 @@ class StatisticsFragment : Fragment() {
         ViewModelProvider(this).get(StatisticsViewModel::class.java)
     }
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,7 +29,7 @@ class StatisticsFragment : Fragment() {
             false
         )
 
-        binding.statisticsViewModel = viewModel
+
 
 
         return binding.root

@@ -10,7 +10,7 @@
     <string name="no_more_cards">No more cards to show</string>
     <string name="studyButtonText">Study</string>
     <string name="id_text">ID: %s</string>
-    <string name="id_text_deck">ID: %ld</string>
+    <string name="id_text_deck">ID: %d</string>
     <string name="question_textView">Question</string>
     <string name="answer_textView">Answer</string>
     <string name="accept_card_edit_button_title">Accept</string>
@@ -48,6 +48,8 @@
     <string name="board_summary_off">Board unavailable</string>
     <string name="board_summary_on">Board available</string>
     <string name="board_title">Show board</string>
+    <string name="stats_deck">Statistics</string>
+    <string name="card_stats_easiness">"Card Easiness "</string>
 
 
 </resources>

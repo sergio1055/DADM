@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import es.uam.dadm.sergiogarcia.projectcards.database.CardDatabase
+import es.uam.dadm.sergiogarcia.projectcards.model.Card
 import es.uam.dadm.sergiogarcia.projectcards.model.DeckWithCards
 
 class CardListViewModel(application: Application) : AndroidViewModel(application) {
@@ -21,4 +22,6 @@ class CardListViewModel(application: Application) : AndroidViewModel(application
     fun loadDeckId(id: Long) {
         deckSelected.value = id
     }
+
+    lateinit var card : Card
 }

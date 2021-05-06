@@ -1,45 +1,24 @@
 package es.uam.dadm.sergiogarcia.projectcards.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.*
 import es.uam.dadm.sergiogarcia.projectcards.CardsApplication
+import es.uam.dadm.sergiogarcia.projectcards.database.CardDatabase
 import es.uam.dadm.sergiogarcia.projectcards.model.Card
 import es.uam.dadm.sergiogarcia.projectcards.model.Deck
+import es.uam.dadm.sergiogarcia.projectcards.model.DeckWithCards
 import timber.log.Timber
 
-class StatisticsViewModel : ViewModel() {
+class StatisticsViewModel(application: Application) : AndroidViewModel(application) {
+    private val context = getApplication<Application>().applicationContext
 
-    var cards : MutableList<Card> = mutableListOf<Card>()
-    var decks : MutableList<Deck> = mutableListOf<Deck>()
-    private val _numberofCards = MutableLiveData<Int>()
-    private val _numberofDecks = MutableLiveData<Int>()
+    private val deckSelected = MutableLiveData<Long>()
 
-    val numberofCards: LiveData<Int>
-        get() = _numberofCards
-
-    val numberofDecks: LiveData<Int>
-        get() = _numberofDecks
-
-    init {
-        cards = CardsApplication.cards
-        decks = CardsApplication.decks
-
-        _numberofCards.value = cards.size
-        _numberofDecks.value = decks.size
+    val deckWithCards: LiveData<List<DeckWithCards>> = Transformations.switchMap(deckSelected) {
+        CardDatabase.getInstance(context).cardDao.getDeckWithCards(it)
     }
 
-    override fun onCleared() {
-        super.onCleared()
-        Timber.i("StatisticsViewModel destroyed")
+    fun loadDeckId(id: Long) {
+        deckSelected.value = id
     }
-
-    fun calculateNumberOfCards() : Int {
-        return cards.size
-    }
-
-    fun calculateNumberOfDecks() : Int {
-        return decks.size
-    }
-
 }

@@ -47,6 +47,14 @@ class DeckAdapter() : RecyclerView.Adapter<DeckAdapter.DeckHolder>() {
                             .actionDeckListFragmentToDeckEditFragment(id))
             }
 
+            binding.statsText?.setOnClickListener {
+                val id = deck.deck.id
+                it.findNavController()
+                    .navigate(
+                        DeckListFragmentDirections
+                            .actionDeckListFragmentToStatisticsDeckFragment(id))
+            }
+
         }
     }
 
