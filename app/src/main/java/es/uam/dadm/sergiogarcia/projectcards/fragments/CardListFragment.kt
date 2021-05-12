@@ -10,6 +10,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import es.uam.dadm.sergiogarcia.projectcards.R
 import es.uam.dadm.sergiogarcia.projectcards.activities.SettingsActivity
@@ -28,6 +30,8 @@ class CardListFragment : Fragment() {
     private var reference = FirebaseDatabase
         .getInstance()
         .getReference(DATABASENAME)
+
+    private var authFirebase = FirebaseAuth.getInstance()
 
     private lateinit var adapter: CardAdapter
     private var deckId : Long = 0
@@ -66,8 +70,6 @@ class CardListFragment : Fragment() {
                 CardDatabase.getInstance(cardListViewModel.getApplication()).cardDao.addCard(card)
             }
 
-            reference.child(card.id).setValue(card)
-
             // Navega al fragmento CardEditFragment
             // pasando el id de card como argumento
             it.findNavController()
@@ -90,9 +92,22 @@ class CardListFragment : Fragment() {
         return binding.root
     }
 
+    private fun uploadInfoFirebase() {
+        adapter.data.forEach {
+            reference.child(it.id).setValue(it)
+        }
+    }
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.fragment_card_list, menu)
+        inflater.inflate(R.menu.fragment_menu, menu)
+    }
+
+    private fun logOut() {
+        authFirebase.signOut()
+        SettingsActivity.setLogged(requireContext(), false)
+
+        this.findNavController().navigate(R.id.action_deckListFragment_to_authentication_fragment)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -100,7 +115,16 @@ class CardListFragment : Fragment() {
             R.id.settings -> {
                 startActivity(Intent(activity, SettingsActivity::class.java))
             }
+
+            R.id.upload_firebase -> {
+                uploadInfoFirebase()
+            }
+
+            R.id.log_out -> {
+                logOut()
+            }
         }
+
         return super.onOptionsItemSelected(item)
     }
 }

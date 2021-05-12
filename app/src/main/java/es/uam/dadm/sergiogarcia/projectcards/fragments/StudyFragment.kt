@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import es.uam.dadm.sergiogarcia.projectcards.R
 import es.uam.dadm.sergiogarcia.projectcards.viewmodel.StudyViewModel
 import es.uam.dadm.sergiogarcia.projectcards.databinding.FragmentStudyBinding
+import timber.log.Timber
 
 class StudyFragment : Fragment() {
     lateinit var binding: FragmentStudyBinding

@@ -38,6 +38,8 @@ class SettingsActivity : AppCompatActivity() {
     companion object {
         val MAXIMUM_KEY = "max_number_cards"
         val MAXIMUM_DEFAULT = "20"
+        val LOGGED = "isLogged"
+        val LOGGED_DEFAULT = false
 
         fun getMaximumNumberOfCards(context: Context): String? {
             return PreferenceManager
@@ -54,6 +56,23 @@ class SettingsActivity : AppCompatActivity() {
             val editor = sharedPreferences.edit()
             editor.putString(MAXIMUM_KEY, max)
             editor.commit ()
+        }
+
+        fun setLogged(context: Context, value: Boolean) {
+            val sharedPreferences = PreferenceManager
+                .getDefaultSharedPreferences(context)
+            val editor = sharedPreferences.edit()
+            editor.putBoolean(LOGGED, value)
+            editor.commit()
+        }
+
+        fun getLogged(context: Context) : Boolean?{
+            return PreferenceManager
+                .getDefaultSharedPreferences(context)
+                .getBoolean(
+                    LOGGED,
+                    LOGGED_DEFAULT
+                )
         }
     }
 }

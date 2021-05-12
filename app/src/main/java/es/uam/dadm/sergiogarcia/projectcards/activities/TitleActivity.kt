@@ -23,22 +23,6 @@ class TitleActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_title)
 
-        val database: FirebaseDatabase = FirebaseDatabase.getInstance()
-        val reference = database.getReference("mensaje")
-        reference.setValue("hola desde cards")
-
-        reference.addValueEventListener(object : ValueEventListener {
-            override fun onCancelled(p0: DatabaseError) {}
-
-            override fun onDataChange(p0: DataSnapshot) {
-                Toast.makeText(
-                    baseContext,
-                    "${p0.value.toString()}",
-                    Toast.LENGTH_LONG
-                ).show()
-            }
-        })
-
         NavigationUI.setupWithNavController(
             binding.navView,
             findNavController(R.id.navHostFragment))
@@ -48,27 +32,4 @@ class TitleActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.navHostFragment)
         return NavigationUI.navigateUp(navController, binding.drawerLayout)
     }
-
-    override fun onPause() {
-        super.onPause()
-        Timber.i("OnPause")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Timber.i("OnResume")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Timber.i("OnStop")
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Timber.i("onStart")
-    }
-
-
-
 }

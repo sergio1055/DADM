@@ -20,28 +20,49 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="authentication_fragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-276" />
+                            <option name="y" value="27" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_titleFragment_to_aboutFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_titleFragment_to_deckListFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_titleFragment_to_studyFragment2">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="cardEditFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="543" />
-                            <option name="y" value="-229" />
+                            <option name="x" value="531" />
+                            <option name="y" value="-308" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
                             <entry key="action_cardEditFragment_pop_including_cardListFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_cardEditFragment_pop_including_cardListFragment2">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_cardEditFragment_self">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -118,8 +139,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="156" />
-                            <option name="y" value="189" />
+                            <option name="x" value="146" />
+                            <option name="y" value="-41" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -130,6 +151,11 @@
                               </value>
                             </entry>
                             <entry key="action_deckListFragment_to_aboutFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_deckListFragment_to_authentication_fragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -149,6 +175,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_deckListFragment_to_statisticsDeckFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -162,6 +193,15 @@
                             <option name="x" value="140" />
                             <option name="y" value="616" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_statisticsDeckFragment_pop_including_deckListFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -192,8 +232,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="176" />
-                            <option name="y" value="-253" />
+                            <option name="x" value="143" />
+                            <option name="y" value="-402" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -209,42 +249,6 @@
                               </value>
                             </entry>
                             <entry key="action_studyFragment_to_deckListFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="titleFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-220" />
-                            <option name="y" value="-3" />
-                          </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_titleFragment_to_aboutFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_titleFragment_to_deckListFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_titleFragment_to_statisticsFragment2">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_titleFragment_to_studyFragment2">
                               <value>
                                 <LayoutPositions />
                               </value>

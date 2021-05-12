@@ -36,4 +36,9 @@
     <dimen name="marginEnd_imageView">157dp</dimen>
     <dimen name="marginTop_about_image">58dp</dimen>
     <dimen name="marginEnd_aboutImage">321dp</dimen>
+    <dimen name="icon_top_margin">24dp</dimen>
+    <dimen name="icon_bottom_margin">24dp</dimen>
+    <dimen name="title_bottom_margin">16dp</dimen>
+    <dimen name="field_width_standard">160dp</dimen>
+    <dimen name="button_horizontal_margin">8dp</dimen>
 </resources>

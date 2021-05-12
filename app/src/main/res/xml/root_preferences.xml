@@ -9,5 +9,9 @@
             app:summaryOff="@string/board_summary_off"
             app:summaryOn="@string/board_summary_on"
             app:title="@string/board_title" />
+
+        <Preference
+            app:key="isLogged"
+            app:defaultValue="false"/>
     </PreferenceCategory>
 </PreferenceScreen>

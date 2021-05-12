@@ -323,7 +323,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/info/baseline_info_24.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio1/plugins/android/lib/android.jar!/images/material/icons/materialicons/cloud_upload/baseline_cloud_upload_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -333,7 +333,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_baseline_info_24" />
+                            <entry key="color" value="181818" />
+                            <entry key="outputName" value="ic_baseline_cloud_upload_24" />
+                            <entry key="sourceFile" value="C:\Users\sergi\OneDrive\Documentos\Universidad y documentos personales\Universidad 20-21\MOVILES\DADM" />
                           </map>
                         </option>
                       </PersistentState>

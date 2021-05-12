@@ -1,19 +1,25 @@
 package es.uam.dadm.sergiogarcia.projectcards.fragments
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import es.uam.dadm.sergiogarcia.projectcards.R
+import es.uam.dadm.sergiogarcia.projectcards.activities.SettingsActivity
 import es.uam.dadm.sergiogarcia.projectcards.adapter.DeckAdapter
 import es.uam.dadm.sergiogarcia.projectcards.database.CardDatabase
 import es.uam.dadm.sergiogarcia.projectcards.databinding.FragmentDeckListBinding
 import es.uam.dadm.sergiogarcia.projectcards.model.Deck
+import es.uam.dadm.sergiogarcia.projectcards.viewmodel.DeckListFirebaseViewModel
 import es.uam.dadm.sergiogarcia.projectcards.viewmodel.DeckListViewModel
 import java.util.concurrent.Executors
 import kotlin.random.Random
@@ -22,9 +28,26 @@ class DeckListFragment : Fragment() {
     private val executor = Executors.newSingleThreadExecutor()
 
     private lateinit var adapter: DeckAdapter
+    private val DATABASENAME = "decks"
+
+
+    private var reference = FirebaseDatabase
+        .getInstance()
+        .getReference(DATABASENAME)
+
+    private var authFirebase = FirebaseAuth.getInstance()
 
     private val deckListViewModel by lazy {
         ViewModelProvider(this).get(DeckListViewModel::class.java)
+    }
+
+    private val deckListFirebaseViewModel by lazy {
+        ViewModelProvider(this).get(DeckListFirebaseViewModel::class.java)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
@@ -66,4 +89,60 @@ class DeckListFragment : Fragment() {
 
         return binding.root
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.fragment_menu, menu)
+    }
+
+    private fun uploadDeckInfo() {
+        if(authFirebase.currentUser != null) {
+            adapter.data.forEach {
+                val deck = it.deck
+                reference.child(authFirebase.currentUser.uid).setValue(it)
+            }
+        }
+    }
+
+    private fun downloadDeckInfo() {
+        deckListFirebaseViewModel.decks.observe(
+            viewLifecycleOwner,
+            Observer {
+                adapter.data = it
+                adapter.notifyDataSetChanged()
+            }
+        )
+    }
+
+    private fun logOut() {
+        authFirebase.signOut()
+        SettingsActivity.setLogged(requireContext(), false)
+        this.findNavController().navigate(R.id.action_deckListFragment_to_authentication_fragment)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.settings -> {
+                startActivity(Intent(activity, SettingsActivity::class.java))
+            }
+
+            R.id.upload_firebase -> {
+                uploadDeckInfo()
+            }
+
+            R.id.log_out -> {
+                logOut()
+            }
+
+            R.id.download_firebase -> {
+                downloadDeckInfo()
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
+
+
+
 }
