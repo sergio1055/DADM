@@ -41,8 +41,6 @@ class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
                     binding.listItemNextDate?.visibility = View.VISIBLE
                     binding.listItemInterval?.visibility = View.VISIBLE
                     binding.moreInfoText.visibility = View.INVISIBLE
-
-                    notifyItemChanged(layoutPosition)
             }
         }
     }
@@ -62,4 +60,11 @@ class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
 
     override fun getItemCount(): Int = data.size
 
+    override fun getItemId(position: Int): Long {
+        return super.getItemId(position)
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return super.getItemViewType(position)
+    }
 }

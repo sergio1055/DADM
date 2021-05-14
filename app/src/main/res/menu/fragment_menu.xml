@@ -17,11 +17,11 @@
         android:id="@+id/upload_firebase"
         android:icon="@android:drawable/ic_menu_upload"
         android:title="@string/upload_firebase"
-        app:showAsAction="ifRoom|withText" />
+        app:showAsAction="always|withText" />
 
     <item
         android:id="@+id/download_firebase"
-        android:icon="@android:drawable/stat_sys_download"
+        android:icon="@android:drawable/stat_notify_sync"
         android:title="@string/download_firebase"
-        app:showAsAction="ifRoom|withText"/>
+        app:showAsAction="always|withText"/>
 </menu>

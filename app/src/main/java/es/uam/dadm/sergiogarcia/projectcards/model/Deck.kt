@@ -7,8 +7,13 @@ import androidx.room.PrimaryKey
 data class Deck(
     var name: String,
     @PrimaryKey var id: Long,
+    var userId: String
 ) {
 
-
+    constructor() : this(
+        "Nombre",
+               0,
+         "Usuario"
+        )
 
 }

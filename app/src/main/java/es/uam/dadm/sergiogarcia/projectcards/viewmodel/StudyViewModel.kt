@@ -4,6 +4,7 @@ import android.app.Application
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.*
+import com.google.firebase.auth.FirebaseAuth
 import es.uam.dadm.sergiogarcia.projectcards.activities.SettingsActivity
 import es.uam.dadm.sergiogarcia.projectcards.database.CardDatabase
 import es.uam.dadm.sergiogarcia.projectcards.model.Card
@@ -14,12 +15,13 @@ import java.util.concurrent.Executors
 @RequiresApi(Build.VERSION_CODES.O)
 class StudyViewModel(application: Application) : AndroidViewModel(application) {
     private val executor = Executors.newSingleThreadExecutor()
+    private var user = FirebaseAuth.getInstance().currentUser
 
     private val context = getApplication<Application>().applicationContext
 
     @RequiresApi(Build.VERSION_CODES.O)
     var card: Card? = null
-    var cards: LiveData<List<Card>>  = CardDatabase.getInstance(context).cardDao.getCards()
+    var cards: LiveData<List<Card>>  = CardDatabase.getInstance(context).cardDao.getCards(user.uid)
     var dueCard: LiveData<Card?> =
         Transformations.map(cards, ::due)
      val cardsLeft: LiveData<Int> =

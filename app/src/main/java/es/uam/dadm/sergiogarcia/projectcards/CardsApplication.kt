@@ -18,9 +18,6 @@ class CardsApplication : Application() {
         Timber.plant(Timber.DebugTree())
 
         val cardDatabase = CardDatabase.getInstance(context = this)
-        executor.execute {
-
-        }
     }
 
     companion object {

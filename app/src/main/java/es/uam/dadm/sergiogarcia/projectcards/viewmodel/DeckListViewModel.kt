@@ -10,7 +10,8 @@ import es.uam.dadm.sergiogarcia.projectcards.model.DeckWithCards
 
 class DeckListViewModel(application: Application) : AndroidViewModel(application) {
     private val context = getApplication<Application>().applicationContext
-    var decks: LiveData<List<DeckWithCards>> = CardDatabase.getInstance(context).cardDao.getDecksWithCards()
+    private var user = FirebaseAuth.getInstance().currentUser
+    var decks: LiveData<List<DeckWithCards>> = CardDatabase.getInstance(context).cardDao.getDecksWithCards(user.uid)
 
 
 }

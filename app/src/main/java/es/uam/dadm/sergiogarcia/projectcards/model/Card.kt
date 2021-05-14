@@ -4,6 +4,7 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import java.time.LocalDateTime
 import java.util.*
@@ -19,15 +20,25 @@ open class Card (
     var date: String = LocalDateTime.now().toString(),
     @PrimaryKey
     var id: String = UUID.randomUUID().toString(),
-    var deckId : Long,
-
+    var deckId : Long = 0,
+    var userId : String
 ) {
+
+    constructor() : this(
+        "Pregunta",
+        "Respuesta",
+        LocalDateTime.now().toString(),
+        UUID.randomUUID().toString(),
+        0,
+        "Usuario"
+    )
 
     var quality: Int = 0
     var repetitions: Int = 0
     var interval: Long = 1L
     var nextPracticeDate: String = date
     var easiness: Double = 2.5
+    @Ignore
     var answered : Boolean = false
 
     companion object {
@@ -38,11 +49,13 @@ open class Card (
             val answer = tokens.get(2)
             val date = tokens.get(3)
             val deckId = tokens.get(4).toLong()
+            val userId = tokens.get(5)
             return Card(
                 question,
                 answer,
                 date = date,
-                deckId = deckId
+                deckId = deckId,
+                userId = userId
             )
         }
     }
@@ -93,7 +106,8 @@ open class Card (
         var card2 = Card(
             this.question,
             this.answer,
-            deckId = this.deckId
+            deckId = this.deckId,
+            userId = this.userId
         )
 
         /* Simulacion avanzada (testing) */

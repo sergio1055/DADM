@@ -30,8 +30,6 @@ class StatisticsFragment : Fragment() {
         )
 
 
-
-
         return binding.root
     }
 }

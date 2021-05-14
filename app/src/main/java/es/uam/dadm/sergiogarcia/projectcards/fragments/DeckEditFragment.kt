@@ -16,6 +16,7 @@ import es.uam.dadm.sergiogarcia.projectcards.R
 import es.uam.dadm.sergiogarcia.projectcards.model.Deck
 import es.uam.dadm.sergiogarcia.projectcards.database.CardDatabase
 import es.uam.dadm.sergiogarcia.projectcards.databinding.FragmentDeckEditBinding
+import es.uam.dadm.sergiogarcia.projectcards.model.Card
 import es.uam.dadm.sergiogarcia.projectcards.viewmodel.DeckEditViewModel
 import java.util.concurrent.Executors
 
@@ -23,6 +24,7 @@ import java.util.concurrent.Executors
 class DeckEditFragment : Fragment() {
     private val executor = Executors.newSingleThreadExecutor()
     lateinit var deck: Deck
+    lateinit var cards: List<Card>
     lateinit var binding: FragmentDeckEditBinding
     lateinit var name: String
 
@@ -44,7 +46,8 @@ class DeckEditFragment : Fragment() {
         val args = DeckEditFragmentArgs.fromBundle(requireArguments())
         deckEditViewModel.loadDeckId(args.deckId)
         deckEditViewModel.deckWithCards.observe(viewLifecycleOwner) {
-            deck = it[0].deck
+            deck = it[0].deck!!
+            cards = it[0].cards
             binding.deck = deck
             name = deck.name
         }
@@ -72,10 +75,10 @@ class DeckEditFragment : Fragment() {
                 CardDatabase.getInstance(context = deckEditViewModel.getApplication())
 
             executor.execute {
-                cardDatabase.cardDao.addDeck(deck)
+                cardDatabase.cardDao.update(deck)
             }
 
-            Snackbar.make(it, R.string.create_deck_text, Snackbar.LENGTH_LONG).show()
+            Snackbar.make(it, R.string.update_deck_text, Snackbar.LENGTH_LONG).show()
             it.findNavController().navigate(R.id.action_deckEditFragment_to_deckListFragment)
         }
 
@@ -99,6 +102,9 @@ class DeckEditFragment : Fragment() {
 
             executor.execute {
                 cardDatabase.cardDao.removeDeck(deck)
+                cards.forEach {
+                    cardDatabase.cardDao.removeCard(it)
+                }
             }
 
             Snackbar.make(it, R.string.remove_deck_text, Snackbar.LENGTH_LONG).show()

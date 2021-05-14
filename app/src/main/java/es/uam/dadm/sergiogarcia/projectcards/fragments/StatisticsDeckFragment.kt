@@ -51,7 +51,7 @@ class StatisticsDeckFragment : Fragment() {
         statisticsDeckViewModel.deckWithCards.observe(
             viewLifecycleOwner,
             Observer {
-                deck = it[0].deck
+                deck = it[0].deck!!
                 cards = it[0].cards
                 setupStatisticsChart()
                 loadData()

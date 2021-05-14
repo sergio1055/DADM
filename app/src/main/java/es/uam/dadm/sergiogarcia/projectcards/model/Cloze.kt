@@ -4,7 +4,7 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 
 @RequiresApi(Build.VERSION_CODES.O)
-class Cloze(question: String, answer: String, deckId: Long) : Card(question, answer, deckId = deckId) {
+class Cloze(question: String, answer: String, deckId: Long, userId: String) : Card(question, answer, deckId = deckId, userId = userId) {
 
     companion object {
         fun fromString(cad : String) : Card {
@@ -12,7 +12,8 @@ class Cloze(question: String, answer: String, deckId: Long) : Card(question, ans
             val question = tokens.get(1)
             val answer = tokens.get(2)
             val deckId = tokens.get(3).toLong()
-            return Cloze(question, answer, deckId)
+            val userId = tokens.get(4)
+            return Cloze(question, answer, deckId, userId = userId)
         }
     }
     override fun show() {

@@ -18,6 +18,7 @@ import es.uam.dadm.sergiogarcia.projectcards.activities.SettingsActivity
 import es.uam.dadm.sergiogarcia.projectcards.adapter.DeckAdapter
 import es.uam.dadm.sergiogarcia.projectcards.database.CardDatabase
 import es.uam.dadm.sergiogarcia.projectcards.databinding.FragmentDeckListBinding
+import es.uam.dadm.sergiogarcia.projectcards.model.Card
 import es.uam.dadm.sergiogarcia.projectcards.model.Deck
 import es.uam.dadm.sergiogarcia.projectcards.viewmodel.DeckListFirebaseViewModel
 import es.uam.dadm.sergiogarcia.projectcards.viewmodel.DeckListViewModel
@@ -35,7 +36,8 @@ class DeckListFragment : Fragment() {
         .getInstance()
         .getReference(DATABASENAME)
 
-    private var authFirebase = FirebaseAuth.getInstance()
+    private var user = FirebaseAuth.getInstance().currentUser
+    private var auth = FirebaseAuth.getInstance()
 
     private val deckListViewModel by lazy {
         ViewModelProvider(this).get(DeckListViewModel::class.java)
@@ -55,10 +57,11 @@ class DeckListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentDeckListBinding>(
-                inflater,
-                R.layout.fragment_deck_list,
-                container,
-                false)
+            inflater,
+            R.layout.fragment_deck_list,
+            container,
+            false
+        )
 
         adapter = DeckAdapter()
         binding.deckRecyclerView?.adapter = adapter
@@ -66,7 +69,7 @@ class DeckListFragment : Fragment() {
 
 
         binding.newCardFab.setOnClickListener {
-            val deck = Deck("", Random.nextLong(100))
+            val deck = Deck("", Random.nextLong(100), userId = user.uid)
             executor.execute {
                 CardDatabase.getInstance(deckListViewModel.getApplication()).cardDao.addDeck(deck)
             }
@@ -74,7 +77,8 @@ class DeckListFragment : Fragment() {
             it.findNavController()
                 .navigate(
                     DeckListFragmentDirections
-                        .actionDeckListFragmentToDeckEditFragment(deck.id))
+                        .actionDeckListFragmentToDeckEditFragment(deck.id)
+                )
         }
 
 
@@ -96,15 +100,16 @@ class DeckListFragment : Fragment() {
     }
 
     private fun uploadDeckInfo() {
-        if(authFirebase.currentUser != null) {
+        if (user != null) {
             adapter.data.forEach {
-                val deck = it.deck
-                reference.child(authFirebase.currentUser.uid).setValue(it)
+                reference.child(user.uid).setValue(it)
             }
         }
     }
 
     private fun downloadDeckInfo() {
+        removeCardsFromRoom()
+
         deckListFirebaseViewModel.decks.observe(
             viewLifecycleOwner,
             Observer {
@@ -114,8 +119,19 @@ class DeckListFragment : Fragment() {
         )
     }
 
+    private fun removeCardsFromRoom() {
+        executor.execute {
+            adapter.data.forEach {
+                CardDatabase.getInstance(requireContext()).cardDao.removeDeck(it.deck!!)
+                it.cards.forEach {
+                    CardDatabase.getInstance(requireContext()).cardDao.removeCard(it)
+                }
+            }
+        }
+    }
+
     private fun logOut() {
-        authFirebase.signOut()
+        auth.signOut()
         SettingsActivity.setLogged(requireContext(), false)
         this.findNavController().navigate(R.id.action_deckListFragment_to_authentication_fragment)
     }
@@ -141,8 +157,6 @@ class DeckListFragment : Fragment() {
 
         return super.onOptionsItemSelected(item)
     }
-
-
 
 
 }

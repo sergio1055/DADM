@@ -32,7 +32,7 @@ class DeckAdapter() : RecyclerView.Adapter<DeckAdapter.DeckHolder>() {
 
         init {
             binding.listDeckName.setOnClickListener {
-                val id = deck.deck.id
+                val id = deck.deck!!.id
                 it.findNavController()
                     .navigate(
                         DeckListFragmentDirections
@@ -40,7 +40,7 @@ class DeckAdapter() : RecyclerView.Adapter<DeckAdapter.DeckHolder>() {
             }
 
             binding.editDeck.setOnClickListener {
-                val id = deck.deck.id
+                val id = deck.deck!!.id
                 it.findNavController()
                     .navigate(
                         DeckListFragmentDirections
@@ -48,7 +48,7 @@ class DeckAdapter() : RecyclerView.Adapter<DeckAdapter.DeckHolder>() {
             }
 
             binding.statsText?.setOnClickListener {
-                val id = deck.deck.id
+                val id = deck.deck!!.id
                 it.findNavController()
                     .navigate(
                         DeckListFragmentDirections
@@ -57,8 +57,6 @@ class DeckAdapter() : RecyclerView.Adapter<DeckAdapter.DeckHolder>() {
 
         }
     }
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DeckHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

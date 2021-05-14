@@ -27,6 +27,7 @@
     <string name="hide_info_text">More information</string>
     <string name="deck_name_hint">Type a name</string>
     <string name="create_deck_text">Deck added correctly</string>
+    <string name="update_deck_text">Deck updated correctly</string>
     <string name="remove_card_text">Card removed correctly</string>
     <string name="remove_deck_text">Deck removed correctly</string>
     <string name="remove_card_button_text">Remove card</string>
@@ -50,7 +51,7 @@
     <string name="board_title">Show board</string>
     <string name="stats_deck">Statistics</string>
     <string name="card_stats_easiness">"Card Easiness "</string>
-    <string name="upload_firebase">"Upload "</string>
+    <string name="upload_firebase">"Upload"</string>
     <string name="upload_firebase_text">Cards uploaded correctly</string>
     <string name="desc_firebase_lockup"> Use the FirebaseUI-Android library to authenticate with Firebase.</string>
     <string name="sign_out">Sign out</string>
@@ -65,7 +66,7 @@
     <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
     <string name="firebase_status_fmt">Firebase UID: %s</string>
     <string name="auth_failed">Authentication failed</string>
-    <string name="download_firebase">Descargar</string>
+    <string name="download_firebase">Syncronize</string>
 
 
 </resources>

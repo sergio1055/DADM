@@ -31,10 +31,11 @@ class CardListFragment : Fragment() {
         .getInstance()
         .getReference(DATABASENAME)
 
-    private var authFirebase = FirebaseAuth.getInstance()
+    private var user = FirebaseAuth.getInstance().currentUser
+    private var auth = FirebaseAuth.getInstance()
 
     private lateinit var adapter: CardAdapter
-    private var deckId : Long = 0
+    private var deckId: Long = 0
     private val cardListViewModel by lazy {
         ViewModelProvider(this).get(CardListViewModel::class.java)
     }
@@ -54,7 +55,8 @@ class CardListFragment : Fragment() {
             inflater,
             R.layout.fragment_card_list,
             container,
-            false)
+            false
+        )
 
         val args = CardListFragmentArgs.fromBundle(requireArguments())
         deckId = args.deckId
@@ -65,20 +67,25 @@ class CardListFragment : Fragment() {
         binding.cardRecyclerView.adapter = adapter
 
         binding.newCardFab.setOnClickListener {
-            val card = Card("", "", deckId = deckId)
-            executor.execute {
-                CardDatabase.getInstance(cardListViewModel.getApplication()).cardDao.addCard(card)
+            if (user != null) {
+                val card = Card("", "", deckId = deckId, userId = user.uid)
+                executor.execute {
+                    CardDatabase.getInstance(cardListViewModel.getApplication()).cardDao.addCard(
+                        card
+                    )
+                }
+
+                // Navega al fragmento CardEditFragment
+                // pasando el id de card como argumento
+                it.findNavController()
+                    .navigate(
+                        CardListFragmentDirections.actionCardListFragmentToCardEditFragment(
+                            card.id,
+                            deckId
+                        )
+                    )
             }
 
-            // Navega al fragmento CardEditFragment
-            // pasando el id de card como argumento
-            it.findNavController()
-                .navigate(
-                    CardListFragmentDirections.actionCardListFragmentToCardEditFragment(
-                        card.id,
-                        deckId
-                    )
-                )
         }
 
         cardListViewModel.deckWithCards.observe(
@@ -104,7 +111,7 @@ class CardListFragment : Fragment() {
     }
 
     private fun logOut() {
-        authFirebase.signOut()
+        auth.signOut()
         SettingsActivity.setLogged(requireContext(), false)
 
         this.findNavController().navigate(R.id.action_deckListFragment_to_authentication_fragment)
