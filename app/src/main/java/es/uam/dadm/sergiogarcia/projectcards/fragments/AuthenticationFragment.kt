@@ -6,8 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
+import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import es.uam.dadm.sergiogarcia.projectcards.R
@@ -24,18 +29,26 @@ class AuthenticationFragment : Fragment() {
     private val binding: FragmentEmailpasswordBinding
         get() = _binding!!
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentEmailpasswordBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        var navigationView : NavigationView = requireActivity().findViewById(R.id.navView)
+        navigationView.getMenu().findItem(R.id.deckListFragment).setEnabled(false)
+        navigationView.getMenu().findItem(R.id.studyFragment).setEnabled(false)
         // Buttons
         with(binding) {
             emailSignInButton.setOnClickListener {

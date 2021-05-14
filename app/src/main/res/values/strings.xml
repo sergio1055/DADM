@@ -67,6 +67,15 @@
     <string name="firebase_status_fmt">Firebase UID: %s</string>
     <string name="auth_failed">Authentication failed</string>
     <string name="download_firebase">Syncronize</string>
+    <string name="firebase_settings">Firebase unavailable</string>
+    <string name="firebase_switch_on">Firebase available</string>
+    <string name="firebase_settings_title">Enable firebase</string>
+    <string name="error_firebase_preference">Cannot syncronize with Firebase. Please enable Firebase from preferences</string>
+    <string name="error_firebase_upload_preference">Cannot upload information from app. Please enable Firebase from settings</string>
+    <string name="logout_success">Sign out correctly</string>
+    <string name="firebase_settings_title_category">Firebase</string>
+    <string name="upload_success">Upload the data correctly</string>
+    <string name="download_success">Syncronize with Firebase correctly</string>
 
 
 </resources>

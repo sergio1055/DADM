@@ -22,13 +22,13 @@ class DeckListFirebaseViewModel(application : Application) : AndroidViewModel(ap
     private val context = getApplication<Application>().applicationContext
 
     var reference = FirebaseDatabase.getInstance().getReference("decks")
-    private var authFirebase = FirebaseAuth.getInstance()
+    private var user = FirebaseAuth.getInstance().currentUser
     val decks: LiveData<List<DeckWithCards>>
         get() = _decks
 
     init {
-        if(authFirebase.currentUser != null) {
-            reference.child(authFirebase.currentUser.uid).child("cards")
+        if(user != null) {
+            reference.child(user.uid).child("cards")
             reference.addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     var listOfDecks: MutableList<DeckWithCards> = mutableListOf<DeckWithCards>()
@@ -36,10 +36,10 @@ class DeckListFirebaseViewModel(application : Application) : AndroidViewModel(ap
                         var newDeckWithCards = deck.getValue(DeckWithCards::class.java)
                         if (newDeckWithCards != null)
                              executor.execute {
-                                CardDatabase.getInstance(context).cardDao.addDeck(newDeckWithCards.deck!!)
-                                newDeckWithCards.cards.forEach {
-                                    CardDatabase.getInstance(context).cardDao.addCard(it)
-                                }
+                                 CardDatabase.getInstance(context).cardDao.addDeck(newDeckWithCards.deck!!)
+                                 newDeckWithCards.cards.forEach {
+                                     CardDatabase.getInstance(context).cardDao.addCard(it)
+                                 }
                             }
 
                             listOfDecks.add(newDeckWithCards!!)

@@ -32,4 +32,6 @@ class TitleActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.navHostFragment)
         return NavigationUI.navigateUp(navController, binding.drawerLayout)
     }
+
+
 }

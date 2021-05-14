@@ -36,7 +36,6 @@ class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardHolder>() {
             }
 
             binding.moreInfoText.setOnClickListener {
-
                     binding.listItemEasiness.visibility = View.VISIBLE
                     binding.listItemNextDate?.visibility = View.VISIBLE
                     binding.listItemInterval?.visibility = View.VISIBLE

@@ -37,6 +37,9 @@
             android:id="@+id/action_studyFragment_pop_including_deckListFragment"
             app:popUpTo="@id/deckListFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_studyFragment_to_authentication_fragment"
+            app:destination="@id/authentication_fragment" />
     </fragment>
     <fragment
         android:id="@+id/cardListFragment"
@@ -53,6 +56,9 @@
             android:id="@+id/action_cardListFragment_to_deckListFragment"
             app:destination="@id/deckListFragment"
             app:popUpTo="@id/deckListFragment" />
+        <action
+            android:id="@+id/action_cardListFragment_to_authentication_fragment"
+            app:destination="@id/authentication_fragment" />
     </fragment>
 
     <fragment
@@ -75,13 +81,20 @@
             android:id="@+id/action_cardEditFragment_pop_including_cardListFragment"
             app:popUpTo="@id/cardListFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_cardEditFragment_to_authentication_fragment"
+            app:destination="@id/authentication_fragment" />
     </fragment>
 
     <fragment
         android:id="@+id/aboutFragment"
         android:name="es.uam.dadm.sergiogarcia.projectcards.fragments.AboutFragment"
         android:label="fragment_about"
-        tools:layout="@layout/fragment_about" />
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_authentication_fragment"
+            app:destination="@id/authentication_fragment" />
+    </fragment>
     <fragment
         android:id="@+id/deckListFragment"
         android:name="es.uam.dadm.sergiogarcia.projectcards.fragments.DeckListFragment"
@@ -110,6 +123,9 @@
         <action
             android:id="@+id/action_deckListFragment_to_authentication_fragment"
             app:destination="@id/authentication_fragment" />
+        <action
+            android:id="@+id/action_deckListFragment_to_authentication_fragment2"
+            app:destination="@id/authentication_fragment" />
     </fragment>
     <fragment
         android:id="@+id/deckEditFragment"
@@ -126,6 +142,9 @@
         <argument
             android:name="deckId"
             app:argType="long" />
+        <action
+            android:id="@+id/action_deckEditFragment_to_authentication_fragment"
+            app:destination="@id/authentication_fragment" />
     </fragment>
     <fragment
         android:id="@+id/statisticsFragment2"
@@ -136,6 +155,9 @@
             android:id="@+id/action_statisticsFragment2_pop_including_deckEditFragment"
             app:popUpTo="@id/deckEditFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_statisticsFragment2_to_authentication_fragment"
+            app:destination="@id/authentication_fragment" />
     </fragment>
     <fragment
         android:id="@+id/statisticsDeckFragment"
@@ -149,5 +171,8 @@
             android:id="@+id/action_statisticsDeckFragment_pop_including_deckListFragment"
             app:popUpTo="@id/deckListFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_statisticsDeckFragment_to_authentication_fragment"
+            app:destination="@id/authentication_fragment" />
     </fragment>
 </navigation>

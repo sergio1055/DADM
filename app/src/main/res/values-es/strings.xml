@@ -68,6 +68,15 @@
     <string name="auth_failed">Authentication failed</string>
     <string name="download_firebase">Sincronizar</string>
     <string name="update_deck_text">Mazo actualizado correctamente</string>
+    <string name="firebase_settings">Firebase no disponible</string>
+    <string name="firebase_switch_on">Firebase disponible</string>
+    <string name="firebase_settings_title">Habilita firebase</string>
+    <string name="error_firebase_preference">No se puede sincronizar con Firebase. Por favor, habilita Firebase desde el panel de ajustes</string>
+    <string name="error_firebase_upload_preference">No puede subirse la información a Firebase. Por favor, habilita Firebase desde el panel de ajustes</string>
+    <string name="logout_success">Cerrada la sesión correctamente</string>
+    <string name="firebase_settings_title_category">Firebase</string>
+    <string name="upload_success">Subida la información a Firebase correctamente</string>
+    <string name="download_success">Sincronización con Firebase correcta</string>
 
 
 </resources>

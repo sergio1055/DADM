@@ -14,4 +14,12 @@
             app:key="isLogged"
             app:defaultValue="false"/>
     </PreferenceCategory>
+    <PreferenceCategory app:title="@string/firebase_settings_title_category">
+    <SwitchPreferenceCompat
+        app:key="firebase"
+        app:summaryOff="@string/firebase_settings"
+        app:summaryOn="@string/firebase_switch_on"
+        app:title="@string/firebase_settings_title"
+        app:defaultValue="true"/>
+    </PreferenceCategory>
 </PreferenceScreen>

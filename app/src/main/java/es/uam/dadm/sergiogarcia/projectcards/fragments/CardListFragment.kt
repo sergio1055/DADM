@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import es.uam.dadm.sergiogarcia.projectcards.R
@@ -27,10 +28,6 @@ class CardListFragment : Fragment() {
     private val executor = Executors.newSingleThreadExecutor()
     private val DATABASENAME = "tarjetas"
 
-    private var reference = FirebaseDatabase
-        .getInstance()
-        .getReference(DATABASENAME)
-
     private var user = FirebaseAuth.getInstance().currentUser
     private var auth = FirebaseAuth.getInstance()
 
@@ -43,6 +40,11 @@ class CardListFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.fragment_menu, menu)
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -99,32 +101,18 @@ class CardListFragment : Fragment() {
         return binding.root
     }
 
-    private fun uploadInfoFirebase() {
-        adapter.data.forEach {
-            reference.child(it.id).setValue(it)
-        }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.fragment_menu, menu)
-    }
 
     private fun logOut() {
         auth.signOut()
         SettingsActivity.setLogged(requireContext(), false)
-
-        this.findNavController().navigate(R.id.action_deckListFragment_to_authentication_fragment)
+        Snackbar.make(requireView(), R.string.logout_success, Snackbar.LENGTH_LONG)
+        this.findNavController().navigate(R.id.action_cardEditFragment_to_authentication_fragment)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.settings -> {
                 startActivity(Intent(activity, SettingsActivity::class.java))
-            }
-
-            R.id.upload_firebase -> {
-                uploadInfoFirebase()
             }
 
             R.id.log_out -> {

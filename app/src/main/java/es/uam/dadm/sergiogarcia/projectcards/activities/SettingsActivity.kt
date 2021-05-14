@@ -3,6 +3,7 @@ package es.uam.dadm.sergiogarcia.projectcards.activities
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import es.uam.dadm.sergiogarcia.projectcards.R
@@ -40,6 +41,8 @@ class SettingsActivity : AppCompatActivity() {
         val MAXIMUM_DEFAULT = "20"
         val LOGGED = "isLogged"
         val LOGGED_DEFAULT = false
+        val FIREBASE_ENABLED = "firebase"
+        val FIREBASE_DEFAULT = true
 
         fun getMaximumNumberOfCards(context: Context): String? {
             return PreferenceManager
@@ -72,6 +75,15 @@ class SettingsActivity : AppCompatActivity() {
                 .getBoolean(
                     LOGGED,
                     LOGGED_DEFAULT
+                )
+        }
+
+        fun getFirebasePreference(context: Context) : Boolean? {
+            return PreferenceManager
+                .getDefaultSharedPreferences(context)
+                .getBoolean(
+                    FIREBASE_ENABLED,
+                    FIREBASE_DEFAULT
                 )
         }
     }
